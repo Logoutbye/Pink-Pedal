@@ -37,7 +37,7 @@ class _ReviewscreenState extends State<Reviewscreen> {
       body: Stack(
         children: [
           Container(
-            height: height * 0.4,
+            height: height * 0.36,
             width: width,
             color: Colors.teal,
             child: Column(
@@ -52,7 +52,7 @@ class _ReviewscreenState extends State<Reviewscreen> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: height * 0.6,
+              height: height * 0.64,
               width: width,
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -244,7 +244,9 @@ class _ReviewscreenState extends State<Reviewscreen> {
                       fontWeight: FontWeight.w900,
                       fontSize: 17
                     ),)),
-                    CustomElevatedButton(buttonText: 'Cancel', onPressed: (){
+                    CustomElevatedButton(
+                      
+                      buttonText: 'Cancel', onPressed: (){
 
                     })
 
