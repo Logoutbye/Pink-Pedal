@@ -3,12 +3,17 @@ import 'package:flutter/material.dart';
 class  Themecolor{
   Themecolor._();
 
-static const Color elvatedbutton_color=Color(0xFF03008B);
-static const Color appBarcolor=Color(0xFF03008B);
-static const Color containercolor=Color(0xFF03008B);
-static const Color containercolor2=Color(0xFFFFFFFF);
-static const Color unselecteditemcolr=Color(0xFF333333);
-static const Color selectedItemColor=Color(0xFF03008B);
-static const Color iconColor=Color(0xFF008000);
-static const Color iconColor2=Color(0xFFFF0000);
+static const Color elvatedButton=Color(0xFF03008B);
+static const Color appBar=Color(0xFF03008B);
+static const Color container=Color(0xFF03008B);
+static const Color container2=Color(0xFFFFFFFF);
+static const Color unselecteditem=Color(0xFF333333);
+static const Color selectedItem=Color(0xFF03008B);
+static const Color icon=Color(0xFF008000);
+static const Color darkthemeicon=Color(0xFFFFFFFF);
+static const Color icon2=Color(0xFFFF0000);
+static const Color Divider=Color(0xFFE9EBED);
+static const Color border=Color(0xFFEBEBEB);
+static const Color textfield=Color(0xFFF7F7F7);
+static const Color Warning=Color(0xFFF41F52);
 }

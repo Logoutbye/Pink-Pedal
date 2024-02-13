@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:liveproject/utilis/Themesdata/theme_text.dart';
 
 class CustomSearchBar extends StatelessWidget {
+  String? hintText;
+  // Color? color;
+  Icon? icon;
+  CustomSearchBar({ this .hintText,this.icon});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding:  EdgeInsets.all(8.0),
       child: Row(
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Container(
                 child: SearchBar(
-                  hintText: 'Search Your Car....',
+                  hintText: hintText,
                   hintStyle: MaterialStateProperty.all(Themetext.atextstyle),
                   trailing: [Icon(Icons.search,
                   size: 35,)],

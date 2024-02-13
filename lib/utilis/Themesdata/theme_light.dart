@@ -13,19 +13,20 @@ class Themelight{
     elevatedButtonTheme: elevatedbuttontheme,
   );
   static AppBarTheme appbar_theme=AppBarTheme(
-backgroundColor: Themecolor.appBarcolor,
+backgroundColor: Themecolor.appBar,
 titleTextStyle: TextStyle(
   color: Colors.white
 )
   );
   static ElevatedButtonThemeData elevatedbuttontheme = ElevatedButtonThemeData(
   style: ElevatedButton.styleFrom(
-    backgroundColor: Themecolor.elvatedbutton_color,
+    backgroundColor: Themecolor.elvatedButton,
     padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(12.0),
+      borderRadius: BorderRadius.circular(15.0),
     ),
     minimumSize: Size(327.0, 56.0),
+  
   ),
 );
 

@@ -13,7 +13,7 @@ class Bottomnavigationbaritemdata extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(items: [
-      BottomNavigationBarItems('Home', Icon(Icons.home), Themecolor.iconcolor),
+      BottomNavigationBarItems('Home', Icon(Icons.home), Colors.black),
       BottomNavigationBarItems(
           'Booking', Icon(Icons.collections_bookmark_outlined), Colors.black),
       BottomNavigationBarItems(
