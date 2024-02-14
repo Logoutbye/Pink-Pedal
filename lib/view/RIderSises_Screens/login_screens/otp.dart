@@ -1,7 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
+import 'package:liveproject/utilis/Themesdata/theme_text.dart';
 
 
 class Otpscreen extends StatefulWidget {
@@ -66,30 +68,48 @@ class _OtpscreenState extends State<Otpscreen> {
               SizedBox(height: 20,),
               CustomElevatedButton(
                 text: 'continue', 
-                onPressed: ()=>Navigator.pushNamed(context, RoutesName.emailRecieve)),
+                onPressed: ()=>Navigator.pushNamed(context, RoutesName.signInUser)),
                 SizedBox(height: 20,),
-                Text.rich(
-               TextSpan(
-                children: [
-                  TextSpan(
-                    text: 'Didn’t receive code?',
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Color(0xFF9CA4AB)
-                    ),
-                    
-                  ),
-                  TextSpan(
-                    text: 'Resend Code',
-                    style: Theme.of(context).textTheme.bodySmall
-                  )
-                ]
-               )
-                  )
+              Text.rich(
+  TextSpan(
+    children: [
+      TextSpan(
+        text: 'Didn’t receive code? ',
+        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+          color: Color(0xFF9CA4AB),
+        ),
+      ),
+      TextSpan(
+        text: 'Resend Code',
+        style: Theme.of(context).textTheme.bodySmall,
+        recognizer: TapGestureRecognizer()
+          ..onTap = () {
+            // Add functionality for resend code here
+        alertbox(); // Placeholder functionality
+          },
+      )
+    ],
+  ),
+)
+
           ],
         ),
       ),
     );
   }
+ void alertbox() {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        //  titlePadding: EdgeInsets.only(top: 5),
+        title: Text('OTP sent successfully',style: Themetext.atextstyle,),
+       
+      );
+    },
+  );
+}
+
  
 }
 class otpcode extends StatefulWidget {

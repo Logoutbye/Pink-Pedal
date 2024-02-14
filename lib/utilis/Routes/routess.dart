@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Routes/slide_transition_page.dart';
+import 'package:liveproject/view/RIderSises_Screens/login_screens/otp.dart';
+import 'package:liveproject/view/RIderSises_Screens/login_screens/otpcode_email_num.dart';
 import 'package:liveproject/view/driver_side_screens/SplashScreen.dart';
 import 'package:liveproject/view/RIderSises_Screens/booking_screeens/adddestination.dart';
 import 'package:liveproject/view/RIderSises_Screens/booking_screeens/deriver_profile.dart';
@@ -40,6 +42,10 @@ switch(settings.name){
   return SlideTransitionPage(page:const Signup());
   case RoutesName.signInUser:
   return SlideTransitionPage(page:const SigninScreen());
+    case RoutesName.otpCode:
+  return SlideTransitionPage(page:const Otpscreen());
+   case RoutesName.otpEmailNum:
+  return SlideTransitionPage(page:const OTP_Email_Num());
   case RoutesName.addDestination:
   return SlideTransitionPage(page:const AddDestination());
    case RoutesName.enterLocation:

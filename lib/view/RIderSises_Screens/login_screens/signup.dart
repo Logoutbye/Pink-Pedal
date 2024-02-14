@@ -192,6 +192,7 @@ class _SignupState extends State<Signup> {
   }
 
   void navigatorsignup() {
-   Navigator.pushNamed(context, RoutesName.signInUser);
+   Navigator.pushNamed(context, RoutesName.otpCode);
   }
+
 }

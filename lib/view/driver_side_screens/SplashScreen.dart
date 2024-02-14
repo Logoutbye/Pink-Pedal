@@ -31,14 +31,14 @@ class _splashScreenDeriverState extends State<splashScreenDeriver> {
                 color: Themecolor.container2,
                 text: 'Ride with us',
                  onPressed: (){
-                  Navigator.pushNamed(context, RoutesName.signInUser);
+                  Navigator.pushNamed(context, RoutesName.signUpUser);
                  }),
                    SizedBox(height: height*0.02,),
                    CustomElevatedButton(
                        textColor: Themecolor.unselecteditem,
                     color: Themecolor.container2,
                     text: 'Join As a Driver', onPressed: (){
-                         Navigator.pushNamed(context, RoutesName.signInUser);
+                         Navigator.pushNamed(context, RoutesName.signUpUser);
                     })
 
           

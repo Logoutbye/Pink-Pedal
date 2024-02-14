@@ -6,6 +6,7 @@ class RoutesName {
   static const String signInUser = 'signinscreens';
   static const String forGotPassword = 'forgotpassword';
   static const String otpCode = 'otp';
+  static const String otpEmailNum='otpcode_email_num';
   static const String emailRecieve = 'emailreceive';
   static const String createNewPassword = 'createnewpassword';
   //this is a routes name of profile screens

@@ -9,6 +9,10 @@ class TodayAppurtunities extends StatefulWidget {
 }
 
 class _TodayAppurtunitiesState extends State<TodayAppurtunities> {
+  int current_Index=0;
+  final List<Widget> screens=[
+  
+  ];
   @override
   Widget build(BuildContext context) {
     var height=MediaQuery.of(context).size.height;
@@ -19,7 +23,7 @@ class _TodayAppurtunitiesState extends State<TodayAppurtunities> {
           Container(
             color: Colors.teal,
             width: double.infinity,
-            height: height*0.7,
+            height: height*0.6,
           ),
           Container(
             decoration: BoxDecoration(
@@ -64,19 +68,48 @@ class _TodayAppurtunitiesState extends State<TodayAppurtunities> {
             maxRadius: 30,
             backgroundColor: Themecolor.container,
             child: Icon(Icons.arrow_upward_sharp,color: Themecolor.container2,)),
+            SizedBox(width: width*0.01,),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               
               children: [
                 Text('Today’s opportunities',style: Theme.of(context).textTheme.bodySmall,),
-                Text('Top ways to earn More',style: Themetext.atextstyle,)
+                SizedBox(height: height*0.01,),
+                Text('Top ways to earn More',style: Themetext.atextstyle.copyWith(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18
+                ))
               ],
             )
             ],
           ),
             ),
           ),
+               BottomNavigationBar(
+         selectedItemColor: Themecolor.selectedItem,
+        unselectedItemColor: Themecolor.unselecteditem,
+        selectedFontSize: 15,
+        unselectedFontSize: 10,
+        type: BottomNavigationBarType.fixed,
+          currentIndex: current_Index,
+        onTap: (index){
+          setState(() {
+            current_Index=index;
+          });
+       
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon:Icon(Icons.emoji_transportation_outlined),
+            label: 'Earnings'
+             ),
+             BottomNavigationBarItem(icon: Icon(Icons.person_pin_outlined),
+             label: 'Request'),
+             BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
+             label:  'profile')
+
+      ]),
       
         ],
       ),

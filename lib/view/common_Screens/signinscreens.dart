@@ -148,7 +148,7 @@ class _SigninScreenState extends State<SigninScreen> {
                           width: width*0.5,
                         ),
                         InkWell(
-                          onTap: ()=>Navigator.pushNamed(context, RoutesName.otpCode),
+                          onTap: ()=>Navigator.pushNamed(context, RoutesName.otpEmailNum),
                           child: Text('Forgot Password',
                               style: Theme.of(context)
                                   .textTheme
