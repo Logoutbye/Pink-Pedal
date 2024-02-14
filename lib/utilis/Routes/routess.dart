@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Routes/slide_transition_page.dart';
-import 'package:liveproject/view/DeriverSides_Screens/SplashScreen.dart';
+import 'package:liveproject/view/driver_side_screens/SplashScreen.dart';
 import 'package:liveproject/view/RIderSises_Screens/booking_screeens/adddestination.dart';
 import 'package:liveproject/view/RIderSises_Screens/booking_screeens/deriver_profile.dart';
 import 'package:liveproject/view/RIderSises_Screens/booking_screeens/enter_location.dart';

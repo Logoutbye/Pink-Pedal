@@ -3,7 +3,7 @@ import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
 import 'package:liveproject/utilis/Themesdata/theme_text.dart';
 import 'package:liveproject/utilis/Themesdata/themecolors.dart';
-import 'package:liveproject/utilis/icons/icons.dart';
+import 'package:liveproject/utilis/constant/icons.dart';
 
 void main() {
   runApp(MyApp());
