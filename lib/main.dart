@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Routes/routess.dart';
-import 'package:liveproject/utilis/Themesdata/theme_light.dart';
+import 'package:liveproject/utilis/routes/routes_name.dart';
+import 'package:liveproject/utilis/routes/routes.dart';
+import 'package:liveproject/utilis/theme/theme_light.dart';
 
 void main() {
   runApp(const Home());
