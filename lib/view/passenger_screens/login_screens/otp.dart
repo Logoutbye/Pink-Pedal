@@ -7,7 +7,10 @@ import 'package:liveproject/utilis/Themesdata/theme_text.dart';
 
 
 class Otpscreen extends StatefulWidget {
-  const Otpscreen({super.key});
+
+ final bool iscreateAccount; // Add a parameter to specify the user's role
+
+  const Otpscreen({Key? key, required this.iscreateAccount}) : super(key: key);
 
   @override
   State<Otpscreen> createState() => _OtpscreenState();
@@ -69,7 +72,13 @@ class _OtpscreenState extends State<Otpscreen> {
               SizedBox(height: 20,),
               CustomElevatedButton(
                 text: 'continue', 
-                onPressed: ()=>Navigator.pushNamed(context, RoutesName.createNewPassword)),
+                onPressed: (){
+                   if (widget.iscreateAccount) {
+                  Navigator.pushNamed(context, RoutesName.signInUser);
+                } else {
+               Navigator.pushNamed(context, RoutesName.createNewPassword);
+                }
+                }),
                 SizedBox(height: 20,),
               Text.rich(
   TextSpan(
