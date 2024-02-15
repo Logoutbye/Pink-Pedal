@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Routes/slide_transition_page.dart';
-import 'package:liveproject/view/RIderSises_Screens/login_screens/otp.dart';
-import 'package:liveproject/view/RIderSises_Screens/login_screens/otpcode_email_num.dart';
-import 'package:liveproject/view/driver_side_screens/SplashScreen.dart';
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/adddestination.dart';
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/deriver_profile.dart';
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/enter_location.dart';
+import 'package:liveproject/view/passenger_screens/login_screens/createnewpassword.dart';
+import 'package:liveproject/view/passenger_screens/login_screens/forgotpassword.dart';
+import 'package:liveproject/view/passenger_screens/login_screens/otp.dart';
+import 'package:liveproject/view/passenger_screens/login_screens/otpcode_email_num.dart';
+import 'package:liveproject/view/driver_screens/SplashScreen.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/adddestination.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/deriver_profile.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/enter_location.dart';
 
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/feedback_screen.dart';
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/findRide.dart';
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/my_booking.dart';
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/ride_completed.dart';
-import 'package:liveproject/view/RIderSises_Screens/chatting_screens/allMessages_screen.dart';
-import 'package:liveproject/view/RIderSises_Screens/login_screens/signup.dart';
-import 'package:liveproject/view/RIderSises_Screens/paycard_screens/Dabit_card.dart';
-import 'package:liveproject/view/RIderSises_Screens/paycard_screens/pay_now.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/Add_NewAdress.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/Edit_Profile.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/HelpAnd-Support.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/MyProfile.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/My_address.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/Select_Language.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/profile_detail.dart';
-import 'package:liveproject/view/RIderSises_Screens/splash/onboarding_screens/firstscreen.dart';
-import 'package:liveproject/view/RIderSises_Screens/splash/onboarding_screens/logopage.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/feedback_screen.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/findRide.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/my_booking.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/ride_completed.dart';
+import 'package:liveproject/view/passenger_screens/chatting_screens/allMessages_screen.dart';
+import 'package:liveproject/view/passenger_screens/login_screens/signup.dart';
+import 'package:liveproject/view/passenger_screens/paycard_screens/Dabit_card.dart';
+import 'package:liveproject/view/passenger_screens/paycard_screens/pay_now.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/Add_NewAdress.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/Edit_Profile.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/HelpAnd-Support.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/MyProfile.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/My_address.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/Select_Language.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/profile_detail.dart';
+import 'package:liveproject/view/passenger_screens/splash/onboarding_screens/firstscreen.dart';
+import 'package:liveproject/view/passenger_screens/splash/onboarding_screens/logopage.dart';
 import 'package:liveproject/view/common_Screens/signinscreens.dart';
 //  Navigator.push(
 //                           context,
@@ -46,6 +48,10 @@ switch(settings.name){
   return SlideTransitionPage(page:const Otpscreen());
    case RoutesName.otpEmailNum:
   return SlideTransitionPage(page:const OTP_Email_Num());
+   case RoutesName.forGotPassword:
+  return SlideTransitionPage(page:const Forgot_password());
+   case RoutesName.createNewPassword:
+  return SlideTransitionPage(page:const newpassword());
   case RoutesName.addDestination:
   return SlideTransitionPage(page:const AddDestination());
    case RoutesName.enterLocation:

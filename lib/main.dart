@@ -4,10 +4,10 @@ import 'package:liveproject/utilis/Routes/routess.dart';
 
 
 import 'package:liveproject/utilis/Themesdata/theme_light.dart';
-import 'package:liveproject/view/driver_side_screens/deriver_info/deriver_basic_info.dart';
-import 'package:liveproject/view/driver_side_screens/ride_detail_screens/bottom_navigation.dart';
-import 'package:liveproject/view/driver_side_screens/vehicle_info/vehicle_basic_info.dart';
-import 'package:liveproject/view/driver_side_screens/vehicle_info/vehicle_info_detail.dart';
+import 'package:liveproject/view/driver_screens/deriver_info/deriver_basic_info.dart';
+import 'package:liveproject/view/driver_screens/ride_detail_screens/bottom_navigation.dart';
+import 'package:liveproject/view/driver_screens/vehicle_info/vehicle_basic_info.dart';
+import 'package:liveproject/view/driver_screens/vehicle_info/vehicle_info_detail.dart';
 
 
 

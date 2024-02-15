@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/view/RIderSises_Screens/login_screens/forgotpassword.dart';
+import 'package:liveproject/view/passenger_screens/login_screens/forgotpassword.dart';
 // import 'package:liveproject/view/screens/login_screens/forgotpassword.dart';
 
 class Email_recieve extends StatefulWidget {

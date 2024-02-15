@@ -16,6 +16,7 @@ class Otpscreen extends StatefulWidget {
 class _OtpscreenState extends State<Otpscreen> {
   @override
   Widget build(BuildContext context) {
+    final height=MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -68,7 +69,7 @@ class _OtpscreenState extends State<Otpscreen> {
               SizedBox(height: 20,),
               CustomElevatedButton(
                 text: 'continue', 
-                onPressed: ()=>Navigator.pushNamed(context, RoutesName.signInUser)),
+                onPressed: ()=>Navigator.pushNamed(context, RoutesName.createNewPassword)),
                 SizedBox(height: 20,),
               Text.rich(
   TextSpan(
@@ -86,6 +87,28 @@ class _OtpscreenState extends State<Otpscreen> {
           ..onTap = () {
             // Add functionality for resend code here
         alertbox(); // Placeholder functionality
+          },
+      )
+    ],
+  ),
+),
+SizedBox(height: height*0.01,),
+         Text.rich(
+  TextSpan(
+    children: [
+      TextSpan(
+        text: 'Wrong Email Address? ',
+        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+          color: Color(0xFF9CA4AB),
+        ),
+      ),
+      TextSpan(
+        text: 'Change Email',
+        style: Theme.of(context).textTheme.bodySmall,
+        recognizer: TapGestureRecognizer()
+          ..onTap = () {
+            // Add functionality for resend code here
+       Navigator.pushNamed(context, RoutesName.forGotPassword); // Placeholder functionality
           },
       )
     ],

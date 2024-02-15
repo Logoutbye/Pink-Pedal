@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
 
 
@@ -129,7 +130,9 @@ return AlertDialog(
          Padding(
            padding: const EdgeInsets.only(left: 30, right: 30),
            child: ElevatedButton(
-             onPressed: () {},
+             onPressed: () {
+              Navigator.pushNamed(context, RoutesName.signInUser);
+             },
              child: Text(
                'Continue',
                style: TextStyle(color: Colors.white),

@@ -41,20 +41,19 @@ class _AllMessagesState extends State<AllMessages> {
           SizedBox(height: height * 0.02),
           Expanded(
             child: ListView.builder(
+              // shrinkWrap: true,
               itemCount: inboxMessages.length,
               itemBuilder: (context, index) {
                 var inboxMessagesall = inboxMessages[index];
                 Image leading = inboxMessagesall.image;
                 String title = inboxMessagesall.title1 ?? '';
                 String subtitle = inboxMessagesall.subtitles ?? '';
-
-                return Expanded(
-                  child: ListTile(
-                    leading: leading, // Fix: Use inboxMessagesall.image instead of inboxMessages.image
-                    title: Text(title,style: Themetext.atextstyle,),
-                    subtitle: Text(subtitle,
-                    style:  Themetext.btextstyle,),
-                  ),
+            
+                return ListTile(
+                  leading: leading, // Fix: Use inboxMessagesall.image instead of inboxMessages.image
+                  title: Text(title,style: Themetext.atextstyle,),
+                  subtitle: Text(subtitle,
+                  style:  Themetext.btextstyle,),
                 );
               },
             ),

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Themesdata/theme_text.dart';
 import 'package:liveproject/utilis/Themesdata/themecolors.dart';
-import 'package:liveproject/view/RIderSises_Screens/booking_screeens/my_booking.dart';
-import 'package:liveproject/view/RIderSises_Screens/chatting_screens/allMessages_screen.dart';
-import 'package:liveproject/view/RIderSises_Screens/paycard_screens/Dabit_card.dart';
-import 'package:liveproject/view/RIderSises_Screens/profile_screens/MyProfile.dart';
+import 'package:liveproject/view/passenger_screens/booking_screeens/my_booking.dart';
+import 'package:liveproject/view/passenger_screens/chatting_screens/allMessages_screen.dart';
+import 'package:liveproject/view/passenger_screens/paycard_screens/Dabit_card.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/MyProfile.dart';
 
 
 class EnterLocation extends StatefulWidget {
