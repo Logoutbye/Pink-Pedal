@@ -3,18 +3,12 @@ import 'package:liveproject/utilis/Routes/Named_Routes.dart';
 import 'package:liveproject/utilis/Routes/routess.dart';
 import 'package:liveproject/utilis/Themesdata/theme_light.dart';
 
-
-
-
-
-// import 'package:liveproject/screens/loginscreens/signinscreens.dart';
-
 void main() {
-  runApp(Home());
+  runApp(const Home());
 }
 
 class Home extends StatelessWidget {
-  const Home({Key? key});
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +17,7 @@ class Home extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: RoutesName.userSplash,
       onGenerateRoute: Routes.generateRoute,
-     
-//  home: TodayAppurtunitie,
+      // home: TodayAppurtunitie,
     );
   }
 }
