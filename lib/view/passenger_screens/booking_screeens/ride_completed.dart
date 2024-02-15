@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
 import 'package:liveproject/utilis/constant/date_time.dart';
 
 class RideCompleted extends StatefulWidget {
-  const RideCompleted({Key? key});
+  const RideCompleted({super.key});
 
   @override
   State<RideCompleted> createState() => _RideCompletedState();
@@ -29,7 +28,7 @@ class _RideCompletedState extends State<RideCompleted> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back),
+        leading: const Icon(Icons.arrow_back),
         title: Text(
           'Ride Completed',
           style: Themetext.Dtextstyle,
@@ -48,7 +47,7 @@ class _RideCompletedState extends State<RideCompleted> {
                   child: ListTile(
                     leading: CircleAvatar(
                       maxRadius: width * 0.05,
-                      backgroundImage: AssetImage(AssetPaths.image),
+                      backgroundImage: const AssetImage(AssetPaths.image),
                     ),
                     title: Text(
                       deriverName,
@@ -66,7 +65,7 @@ class _RideCompletedState extends State<RideCompleted> {
                     CustomElevatedButton(
                       text: 'contact',
                       onPressed: () {},
-                      size: Size(80.0, 20.0),
+                      size: const Size(80.0, 20.0),
                     ),
                     Text(
                       'MR-AF-212',
@@ -83,7 +82,7 @@ class _RideCompletedState extends State<RideCompleted> {
               children: [
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.location_on_outlined,
                       size: 30,
                     ),
@@ -101,7 +100,7 @@ class _RideCompletedState extends State<RideCompleted> {
                 ),
                 Row(
                   children: [
-                    Icon(Icons.timer_outlined, size: 30),
+                    const Icon(Icons.timer_outlined, size: 30),
                     SizedBox(
                       width: width * 0.001,
                     ),
@@ -161,10 +160,10 @@ class _RideCompletedState extends State<RideCompleted> {
               height: height * 0.01,
             ),
             Container(
-              padding: EdgeInsets.only(left: 15.0, top: 35),
+              padding: const EdgeInsets.only(left: 15.0, top: 35),
               height: height * 0.1,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
                 color: Colors.white,
                 boxShadow: [
@@ -172,7 +171,7 @@ class _RideCompletedState extends State<RideCompleted> {
                     color: Color(0xFFD9D9D9),
                     blurRadius: 6,
                     spreadRadius: 2,
-                    offset: const Offset(
+                    offset: Offset(
                       0,
                       5,
                     ),
@@ -192,10 +191,10 @@ class _RideCompletedState extends State<RideCompleted> {
                       },
                       value: selectedPaymentMethod,
                       items: [
-                        DropdownMenuItem<String>(
+                        const DropdownMenuItem<String>(
                           value: null,
                           child: Padding(
-                            padding: const EdgeInsets.only(bottom: 10),
+                            padding: EdgeInsets.only(bottom: 10),
                             child: Text('Select Payment Method'),
                           ),
                         ),
@@ -204,8 +203,8 @@ class _RideCompletedState extends State<RideCompleted> {
                             return DropdownMenuItem<String>(
                               value: value,
                               child: Container(
-                                padding: EdgeInsets.all(10.0),
-                                decoration: BoxDecoration(
+                                padding: const EdgeInsets.all(10.0),
+                                decoration: const BoxDecoration(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(15)),
                                   color: Colors.white,
@@ -298,7 +297,7 @@ class CustomDropdownButton extends StatelessWidget {
       iconSize: 24,
       elevation: 16,
       
-      style: TextStyle(color: Colors.black),
+      style: const TextStyle(color: Colors.black),
       underline: Container(), // Set the underline to an empty container
       isExpanded: true,
     );

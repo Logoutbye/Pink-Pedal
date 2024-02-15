@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 
 class DebitCard extends StatefulWidget {
   const DebitCard({Key? key}) : super(key: key);

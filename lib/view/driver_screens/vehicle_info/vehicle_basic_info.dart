@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 class VehicleInfo extends StatefulWidget {
   const VehicleInfo({super.key});
@@ -27,13 +27,13 @@ class _VehicleInfoState extends State<VehicleInfo> {
     body: Column(
         children:  [
           ListTile(
-            leading: Icon(Icons.person_2_outlined),
+            leading: const Icon(Icons.person_2_outlined),
             title: Text('Model Color', style: Themetext.atextstyle),
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
           ),
         const  Divider(color: Themecolor.Divider,),
           ListTile(
-            leading: Icon(Icons.add_card_rounded),
+            leading: const Icon(Icons.add_card_rounded),
             title: Text('Deriver License', style: Themetext.atextstyle),
             trailing:const Icon(Icons.arrow_forward_ios),
           ),

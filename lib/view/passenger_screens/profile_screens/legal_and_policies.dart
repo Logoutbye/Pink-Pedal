@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 
 class LegalAndPolicies extends StatefulWidget {

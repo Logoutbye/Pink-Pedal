@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
 
 
-class newpassword extends StatefulWidget {
-  const newpassword({super.key});
+class CreateNewPassword extends StatefulWidget {
+  const CreateNewPassword({super.key});
 
   @override
-  State<newpassword> createState() => _newpasswordState();
+  State<CreateNewPassword> createState() => _CreateNewPasswordState();
 }
 
-class _newpasswordState extends State<newpassword> {
+class _CreateNewPasswordState extends State<CreateNewPassword> {
   TextEditingController newpasswordcontroller=TextEditingController();
     TextEditingController confirmpasswordcontroller=TextEditingController();
 
@@ -20,8 +20,8 @@ class _newpasswordState extends State<newpassword> {
     var width=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFEFEFE),
-        leading: Icon(Icons.arrow_back),
+        backgroundColor: const Color(0xFFFEFEFE),
+        leading: const Icon(Icons.arrow_back),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -41,20 +41,20 @@ class _newpasswordState extends State<newpassword> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              Text('Enter your new password'),
+              const Text('Enter your new password'),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               TextField(
                 controller: newpasswordcontroller,
                 keyboardType: TextInputType.text,
-                style: TextStyle(color: Colors.black),
+                style: const TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   labelText: 'New Password',
                   labelStyle: Theme.of(context).textTheme.bodySmall,
                   hintText: 'Enter  a New Password',
                   hintStyle: Theme.of(context).textTheme.bodyMedium,
-                   contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                   contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
                   border:const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(
                         10)), // Use Radius.circular to specify the border radius
@@ -67,14 +67,14 @@ class _newpasswordState extends State<newpassword> {
               TextField(
                 controller: confirmpasswordcontroller,
                 keyboardType: TextInputType.text,
-                style: TextStyle(color: Colors.black),
+                style: const TextStyle(color: Colors.black),
                 decoration: InputDecoration(
                   labelText: 'Confirm Password',
                   labelStyle: Theme.of(context).textTheme.bodySmall,
                   hintText: 'Confirm Your Password',
                   hintStyle: Theme.of(context).textTheme.bodyMedium,
-                   contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
-                  border: OutlineInputBorder(
+                   contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(
                         10)), // Use Radius.circular to specify the border radius
                   ),
@@ -113,10 +113,10 @@ return AlertDialog(
            'Success',
            style: Theme.of(context).textTheme.bodySmall,
          ),
-         SizedBox(
+         const SizedBox(
            height: 15,
          ),
-         Wrap(
+         const Wrap(
            children: [
              Text(
                'Your password is successfully created',
@@ -124,7 +124,7 @@ return AlertDialog(
              ),
            ],
          ),
-         SizedBox(
+         const SizedBox(
            height: 15,
          ),
          Padding(
@@ -133,7 +133,7 @@ return AlertDialog(
              onPressed: () {
               Navigator.pushNamed(context, RoutesName.signInUser);
              },
-             child: Text(
+             child: const Text(
                'Continue',
                style: TextStyle(color: Colors.white),
              ),

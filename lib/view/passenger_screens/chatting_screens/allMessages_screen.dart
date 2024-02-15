@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
-import 'package:liveproject/utilis/searchbar.dart';
+import 'package:liveproject/utilis/components/custom_search_bar.dart';
 
 class AllMessages extends StatefulWidget {
   const AllMessages({Key? key}) : super(key: key);

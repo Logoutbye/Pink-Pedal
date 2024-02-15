@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 
 class VehicleInfoDetail extends StatefulWidget {

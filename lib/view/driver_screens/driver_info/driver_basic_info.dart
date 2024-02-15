@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 
@@ -13,7 +13,7 @@ class BasicInfo extends StatefulWidget {
 }
 
 class _BasicInfoState extends State<BasicInfo> {
-  TextEditingController _nameController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -35,7 +35,7 @@ class _BasicInfoState extends State<BasicInfo> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
+                const Center(
                   child: CircleAvatar(
                     maxRadius: 50,
                     backgroundImage: AssetImage(AssetPaths.image1),
@@ -48,7 +48,7 @@ class _BasicInfoState extends State<BasicInfo> {
                   child: Container(
                       height: height * 0.04,
                       width: width * 0.2,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Themecolor.container,
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       child: Center(
@@ -61,7 +61,7 @@ class _BasicInfoState extends State<BasicInfo> {
                         Themetext.btextstyle.copyWith(fontWeight: FontWeight.bold)),
                 SizedBox(height: height * 0.01),
                 Container(
-                  padding: EdgeInsets.only(left: 8),
+                  padding: const EdgeInsets.only(left: 8),
                   decoration: BoxDecoration(
                     color: Themecolor.textfield,
                     borderRadius: BorderRadius.circular(15),
@@ -83,7 +83,7 @@ class _BasicInfoState extends State<BasicInfo> {
                         Themetext.btextstyle.copyWith(fontWeight: FontWeight.bold)),
                 SizedBox(height: height * 0.01),
                 Container(
-                  padding: EdgeInsets.only(left: 8),
+                  padding: const EdgeInsets.only(left: 8),
                   decoration: BoxDecoration(
                     color: Themecolor.textfield,
                     borderRadius: BorderRadius.circular(15),
@@ -104,7 +104,7 @@ class _BasicInfoState extends State<BasicInfo> {
                         Themetext.btextstyle.copyWith(fontWeight: FontWeight.bold)),
                 SizedBox(height: height * 0.01),
                 Container(
-                  padding: EdgeInsets.only(left: 8),
+                  padding: const EdgeInsets.only(left: 8),
                   decoration: BoxDecoration(
                     color: Themecolor.textfield,
                     borderRadius: BorderRadius.circular(15),
@@ -125,7 +125,7 @@ class _BasicInfoState extends State<BasicInfo> {
                   style: Themetext.atextstyle,
                 ),
                 SizedBox(height: height * 0.01),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     CircleAvatar(
@@ -151,7 +151,7 @@ class _BasicInfoState extends State<BasicInfo> {
                     Container(
                         height: height * 0.04,
                         width: width * 0.2,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Themecolor.container,
                             borderRadius: BorderRadius.all(Radius.circular(10))),
                         child: Center(
@@ -160,7 +160,7 @@ class _BasicInfoState extends State<BasicInfo> {
                                 Container(
                         height: height * 0.04,
                         width: width * 0.2,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Themecolor.container,
                             borderRadius: BorderRadius.all(Radius.circular(10))),
                         child: Center(
@@ -178,7 +178,7 @@ class _BasicInfoState extends State<BasicInfo> {
                  SizedBox(height: height * 0.01),
                 Text('Selfie With ID',style: Themetext.atextstyle,),
                  SizedBox(height: height * 0.01),
-                  Center(
+                  const Center(
                   child: CircleAvatar(
                     maxRadius: 50,
                  child: Icon(Icons.camera_front_rounded,

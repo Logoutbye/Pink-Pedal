@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class Themetext {
   Themetext._();
-  static final double smallSize = 12.0;
-  static final double mediumeSize = 14.0;
- static final double largeSize = 18.0;
- static final double extraLargeSize = 24.0;
- static  TextTheme text_theme = TextTheme(
+  static const double smallSize = 12.0;
+  static const double mediumeSize = 14.0;
+ static const double largeSize = 18.0;
+ static const double extraLargeSize = 24.0;
+ static  TextTheme text_theme = const TextTheme(
     bodyLarge: TextStyle(
       fontFamily: 'plusjakartasans',
       fontSize: extraLargeSize,
@@ -29,34 +29,34 @@ class Themetext {
       fontSize: mediumeSize,
       fontWeight: FontWeight.w500,
       fontFamily: 'poppins',
-      color: Color(0xFFCA4AB),
+      color: Color(0x0ffca4ab),
     ),
   );
-  static TextStyle atextstyle = TextStyle(
+  static TextStyle atextstyle = const TextStyle(
     fontFamily: 'poppins',
     fontSize: mediumeSize,
     fontWeight: FontWeight.w600,
     color: Color(0xFF000000),
   );
-  static  TextStyle btextstyle = TextStyle(
+  static  TextStyle btextstyle = const TextStyle(
     fontFamily: 'inter',
     fontSize: mediumeSize,
     fontWeight: FontWeight.w400,
     color: Color(0xFF9E9E9E),
   );
-  static  TextStyle ctextstyle = TextStyle(
+  static  TextStyle ctextstyle = const TextStyle(
     fontFamily: 'poppins',
     fontSize: mediumeSize,
     fontWeight: FontWeight.w500,
     color: Color(0xFFFFFFFF),
   );
-  static  TextStyle Dtextstyle = TextStyle(
+  static  TextStyle Dtextstyle = const TextStyle(
     fontFamily: 'poppins',
     fontSize: largeSize,
     fontWeight: FontWeight.w600,
     color: Color(0xFF000000),
   );
-  static TextStyle Etextstyle = TextStyle(
+  static TextStyle Etextstyle = const TextStyle(
     fontFamily: 'nunito',
     fontSize: mediumeSize,
     fontWeight: FontWeight.w700,

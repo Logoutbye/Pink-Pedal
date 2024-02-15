@@ -2,25 +2,25 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class Sucesss_screem extends StatefulWidget {
-  const Sucesss_screem({Key? key}) : super(key: key);
+class SucesssScreen extends StatefulWidget {
+  const SucesssScreen({Key? key}) : super(key: key);
 
   @override
-  State<Sucesss_screem> createState() => _Sucesss_screemState();
+  State<SucesssScreen> createState() => _SucesssScreenState();
 }
 
-class _Sucesss_screemState extends State<Sucesss_screem> {
+class _SucesssScreenState extends State<SucesssScreen> {
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/sucessful.jpeg'),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
-                Color(0xFF1717253D),
+                Color(0xff1717253d),
                 BlendMode.darken,
               ),
             ),
@@ -34,14 +34,14 @@ class _Sucesss_screemState extends State<Sucesss_screem> {
         ),
         Scaffold(
           appBar: AppBar(
-            backgroundColor:  Color(0xFF1717253D),
-            leading: Icon(Icons.arrow_back),
+            backgroundColor:  const Color(0xff1717253d),
+            leading: const Icon(Icons.arrow_back),
           ),
           backgroundColor:
               Colors.transparent, // Make the scaffold background transparent
           body: Center(
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFFFFFFFF),
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
@@ -61,10 +61,10 @@ class _Sucesss_screemState extends State<Sucesss_screem> {
                     'Success',
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Wrap(
+                  const Wrap(
                     children: [
                       Text(
                         'Your password is successfully created',
@@ -72,14 +72,14 @@ class _Sucesss_screemState extends State<Sucesss_screem> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
                     child: ElevatedButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         'Continue',
                         style: TextStyle(color: Colors.white),
                       ),

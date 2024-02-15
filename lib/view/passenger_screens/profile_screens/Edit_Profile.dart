@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 
 class EditProfile extends StatefulWidget {
@@ -13,10 +13,10 @@ class EditProfile extends StatefulWidget {
 }
 
 class _EditProfileState extends State<EditProfile> {
-  TextEditingController _nameController = TextEditingController();
-  TextEditingController _dobController = TextEditingController();
-  TextEditingController _phoneNumberController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _dobController = TextEditingController();
+  final TextEditingController _phoneNumberController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
 
   bool isEditable = true;
 
@@ -44,7 +44,7 @@ class _EditProfileState extends State<EditProfile> {
               Text('Full Name', style: Themetext.btextstyle),
               SizedBox(height: height * 0.01),
               Container(
-                padding: EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.only(left: 8),
                 decoration: BoxDecoration(
                   color: Themecolor.textfield,
                   borderRadius: BorderRadius.circular(15),
@@ -65,7 +65,7 @@ class _EditProfileState extends State<EditProfile> {
               Text('Date of Birth', style: Themetext.btextstyle),
               SizedBox(height: height * 0.01),
               Container(
-                padding: EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.only(left: 8),
                 decoration: BoxDecoration(
                   color: Themecolor.textfield,
                   borderRadius: BorderRadius.circular(15),
@@ -78,7 +78,7 @@ class _EditProfileState extends State<EditProfile> {
                     labelText: 'June 14, 1996',
                     labelStyle: Themetext.btextstyle,
                     suffixIcon: IconButton(
-                      icon: Icon(Icons.calendar_today, size: 30),
+                      icon: const Icon(Icons.calendar_today, size: 30),
                       onPressed: () {
                         _selectDate(context, _dobController);
                       },
@@ -92,7 +92,7 @@ class _EditProfileState extends State<EditProfile> {
               Text('Phone Number', style: Themetext.btextstyle),
               SizedBox(height: height * 0.01),
               Container(
-                padding: EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.only(left: 8),
                 decoration: BoxDecoration(
                   color: Themecolor.textfield,
                   borderRadius: BorderRadius.circular(15),
@@ -113,7 +113,7 @@ class _EditProfileState extends State<EditProfile> {
               Text('Email', style: Themetext.btextstyle),
               SizedBox(height: height * 0.01),
               Container(
-                padding: EdgeInsets.only(left: 8),
+                padding: const EdgeInsets.only(left: 8),
                 decoration: BoxDecoration(
                   color: Themecolor.textfield,
                   borderRadius: BorderRadius.circular(15),
@@ -157,14 +157,14 @@ class _EditProfileState extends State<EditProfile> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Selected Date"),
+            title: const Text("Selected Date"),
             content: Text(picked.toLocal().toString()),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           );

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
 
-class feedback_screen extends StatefulWidget {
-  const feedback_screen({super.key});
+class FeedbackScreen extends StatefulWidget {
+  const FeedbackScreen({super.key});
 
   @override
-  State<feedback_screen> createState() => _feedback_screenState();
+  State<FeedbackScreen> createState() => _FeedbackScreenState();
 }
 
-class _feedback_screenState extends State<feedback_screen> {
+class _FeedbackScreenState extends State<FeedbackScreen> {
   String deriverName = 'Younis Arif';
   String rideName = 'civic';
   double  ratings=0;
@@ -39,7 +39,7 @@ class _feedback_screenState extends State<feedback_screen> {
                   child: ListTile(
                     leading: CircleAvatar(
                       maxRadius: width * 0.05,
-                      backgroundImage: AssetImage(AssetPaths.image),
+                      backgroundImage: const AssetImage(AssetPaths.image),
                     ),
                     title: Text(
                       deriverName,
@@ -59,11 +59,11 @@ class _feedback_screenState extends State<feedback_screen> {
                 Column(
                   children: [
                     CustomElevatedButton(
-                      textStyle: TextStyle(color: Color(0xFF6C6C70)),
+                      textStyle: const TextStyle(color: Color(0xFF6C6C70)),
                       color: Colors.white,
                       text: 'Profile',
                       onPressed: () =>Navigator.pushNamed(context, RoutesName.deriverProfile),
-                      size: Size(80.0, 20.0),
+                      size: const Size(80.0, 20.0),
                     ),
                   ],
                 )
@@ -72,7 +72,7 @@ class _feedback_screenState extends State<feedback_screen> {
             SizedBox(
               height: height * 0.01,
             ),
-            Divider(
+            const Divider(
               color: Color(0xFFEBEBEB),
             ),
             SizedBox(
@@ -88,7 +88,7 @@ class _feedback_screenState extends State<feedback_screen> {
                 style: Theme.of(context)
                     .textTheme
                     .bodyMedium!
-                    .copyWith(color: Color(0xFF6C6C70)),
+                    .copyWith(color: const Color(0xFF6C6C70)),
               ),
             ),
             SizedBox(
@@ -98,7 +98,7 @@ class _feedback_screenState extends State<feedback_screen> {
              child: RatingBar.builder(
               minRating: 1,
               itemBuilder: (BuildContext context,_){
-                return Icon(Icons.star,color: Colors.amber,);
+                return const Icon(Icons.star,color: Colors.amber,);
               }, 
               onRatingUpdate: (_){
              

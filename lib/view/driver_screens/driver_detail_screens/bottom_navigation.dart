@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 class TodayAppurtunities extends StatefulWidget {
   const TodayAppurtunities({super.key});
 
@@ -39,7 +39,7 @@ class _TodayAppurtunitiesState extends State<TodayAppurtunities> {
                         color: Colors.grey.shade300,
                         blurRadius: 20,
                         spreadRadius: 1,
-                           offset: Offset(0, 2),)
+                           offset: const Offset(0, 2),)
               ]
             ),
           child: Padding(
@@ -47,9 +47,9 @@ class _TodayAppurtunitiesState extends State<TodayAppurtunities> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(Icons.keyboard_arrow_down_sharp,size: 30,),
+                const Icon(Icons.keyboard_arrow_down_sharp,size: 30,),
                 Text('You are Online Now',style: Themetext.atextstyle,),
-                Icon(Icons.toggle_off_outlined,size: 30,)
+                const Icon(Icons.toggle_off_outlined,size: 30,)
               ],
             ),
           ),
@@ -58,13 +58,13 @@ class _TodayAppurtunitiesState extends State<TodayAppurtunities> {
             child: Container(
               width: double.infinity,
               height: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFFEAEAEA)
               ),
               child:     Row(
                 mainAxisAlignment: MainAxisAlignment.center,
             children: [
-           CircleAvatar(
+           const CircleAvatar(
             maxRadius: 30,
             backgroundColor: Themecolor.container,
             child: Icon(Icons.arrow_upward_sharp,color: Themecolor.container2,)),
@@ -99,7 +99,7 @@ class _TodayAppurtunitiesState extends State<TodayAppurtunities> {
           });
        
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon:Icon(Icons.emoji_transportation_outlined),
             label: 'Earnings'

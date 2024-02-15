@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 class NewAddress extends StatefulWidget {
   const NewAddress({super.key});
@@ -11,7 +11,7 @@ class NewAddress extends StatefulWidget {
 }
 
 class _NewAddressState extends State<NewAddress> {
-   TextEditingController _nameController = TextEditingController();
+   final TextEditingController _nameController = TextEditingController();
    String? chooseCountryValue ;
    List<String > countryList=['Pakistan','India','Nepal','Bagladash'];
    String? chooseCityValue;
@@ -44,7 +44,7 @@ class _NewAddressState extends State<NewAddress> {
                   SizedBox(height: height * 0.01),
                   Container(
                     height: height*0.07,
-                    padding: EdgeInsets.only(left: 8),
+                    padding: const EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       color: Themecolor.textfield,
                       borderRadius: BorderRadius.circular(15),
@@ -67,7 +67,7 @@ class _NewAddressState extends State<NewAddress> {
                 SizedBox(height: height * 0.01),
                 Container(
                       height: height*0.07,
-                    padding: EdgeInsets.only(left: 8),
+                    padding: const EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       color: Themecolor.textfield,
                       borderRadius: BorderRadius.circular(15),
@@ -103,7 +103,7 @@ class _NewAddressState extends State<NewAddress> {
                 SizedBox(height: height * 0.01),
                 Container(
                     height: height*0.07,
-                    padding: EdgeInsets.only(left: 8),
+                    padding: const EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       color: Themecolor.textfield,
                       borderRadius: BorderRadius.circular(15),
@@ -136,7 +136,7 @@ class _NewAddressState extends State<NewAddress> {
                 SizedBox(height: height * 0.01),
                 Container(
                   height: height*0.07,
-                    padding: EdgeInsets.only(left: 8),
+                    padding: const EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       color: Themecolor.textfield,
                       borderRadius: BorderRadius.circular(15),
@@ -170,7 +170,7 @@ class _NewAddressState extends State<NewAddress> {
                 SizedBox(height: height * 0.01),
                 Container(
                   height: height*0.07,
-                    padding: EdgeInsets.only(left: 8),
+                    padding: const EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       color: Themecolor.textfield,
                       borderRadius: BorderRadius.circular(15),
@@ -202,8 +202,8 @@ class _NewAddressState extends State<NewAddress> {
                 SizedBox(height: height * 0.01),
                 Container(
                    height: height*0.2,
-                    padding: EdgeInsets.only(left: 8),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.only(left: 8),
+                    decoration: const BoxDecoration(
                       color: Themecolor.textfield,
                       borderRadius: BorderRadius.only(topRight: Radius.circular(15),topLeft: Radius.circular(15))
                     ),
@@ -218,7 +218,7 @@ class _NewAddressState extends State<NewAddress> {
                  SizedBox(height: height * 0.02),
                  Center(
                    child: CustomElevatedButton(
-                    textColor: Color(0xFF9CA4AB),
+                    textColor: const Color(0xFF9CA4AB),
                     color: Themecolor.textfield,
                     text: 'Save Address', onPressed: (){}),
                  )

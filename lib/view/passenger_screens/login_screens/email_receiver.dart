@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/routes/routes_name.dart';
 import 'package:liveproject/utilis/components/elevatedbutton.dart';
 
-
-class Email_recieve extends StatefulWidget {
-  const Email_recieve({Key? key}) : super(key: key);
+class EmailReciever extends StatefulWidget {
+  const EmailReciever({Key? key}) : super(key: key);
 
   @override
-  State<Email_recieve> createState() => _Email_recieveState();
+  State<EmailReciever> createState() => _EmailRecieverState();
 }
 
-class _Email_recieveState extends State<Email_recieve> {
+class _EmailRecieverState extends State<EmailReciever> {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -19,7 +18,7 @@ class _Email_recieveState extends State<Email_recieve> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back),
+        leading: const Icon(Icons.arrow_back),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

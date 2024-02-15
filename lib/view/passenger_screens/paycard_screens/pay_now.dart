@@ -1,35 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
 
-class Paynow extends StatefulWidget {
-  const Paynow({Key? key}) : super(key: key);
+class PayNow extends StatefulWidget {
+  const PayNow({Key? key}) : super(key: key);
 
   @override
-  State<Paynow> createState() => _PaynowState();
+  State<PayNow> createState() => _PayNowState();
 }
 
-class _PaynowState extends State<Paynow> {
+class _PayNowState extends State<PayNow> {
   List<prevoiusCardsModel> cardslist = [
     prevoiusCardsModel(
-      leading: Icon(Icons.card_giftcard),
+      leading: const Icon(Icons.card_giftcard),
       title: 'Visa',
       subtitle: '•••• 2183',
-      icon: Icon(Icons.more_horiz_outlined),
+      icon: const Icon(Icons.more_horiz_outlined),
     ),
     prevoiusCardsModel(
-      leading: Icon(Icons.flag_circle),
+      leading: const Icon(Icons.flag_circle),
       title: 'Visa',
       subtitle: '•••• 2183',
-      icon: Icon(Icons.more_horiz_outlined),
+      icon: const Icon(Icons.more_horiz_outlined),
     ),
     prevoiusCardsModel(
-      leading: Icon(Icons.credit_card_rounded),
+      leading: const Icon(Icons.credit_card_rounded),
       title: 'Visa',
       subtitle: '•••• 2183',
-      icon: Icon(Icons.more_horiz_outlined),
+      icon: const Icon(Icons.more_horiz_outlined),
     ),
   ];
   String Amount = '1000';
@@ -54,7 +54,7 @@ class _PaynowState extends State<Paynow> {
                 'Account ending in 2183',
                 style: Themetext.btextstyle,
               ),
-              trailing: Icon(Icons.more_horiz),
+              trailing: const Icon(Icons.more_horiz),
             ),
             SizedBox(height: height * 0.02),
             Padding(
@@ -74,7 +74,7 @@ class _PaynowState extends State<Paynow> {
               ),
             ),
             SizedBox(height: height * 0.02),
-            Container(
+            SizedBox(
               height: height * 0.3, // Set the height as needed
               child: ListView.builder(
                 itemCount: cardslist.length,
@@ -89,7 +89,7 @@ class _PaynowState extends State<Paynow> {
                         width: width * 0.15,
                         height: height * 0.15,
                         decoration: BoxDecoration(
-                            color: Color(0xFFEBEBEB),
+                            color: const Color(0xFFEBEBEB),
                             border: Border.all(color: Themecolor.border)),
                         child: leadings),
                     title: Text(titles, style: Themetext.Dtextstyle),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class FirstOnboardingScreen extends StatefulWidget {
   const FirstOnboardingScreen({Key? key}) : super(key: key);
@@ -29,18 +28,18 @@ class _FirstOnboardingScreenState extends State<FirstOnboardingScreen> {
     return Scaffold(
       body: PageView(
         controller: pageController,
-        children: [
-          Reusable(imagepath: AssetPaths.onBoarding11),
-          Reusable(imagepath: AssetPaths.onBoarding2),
-          Reusable(imagepath: AssetPaths.onBoarding3),
-        ],
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         onPageChanged: (int page) {
           if (page == 2) { // Assuming last screen is at index 2
             // Navigate to desired screen
            Navigator.pushNamed(context, RoutesName.deriverUser);
           }
         },
+        children: const [
+          Reusable(imagepath: AssetPaths.onBoarding11),
+          Reusable(imagepath: AssetPaths.onBoarding2),
+          Reusable(imagepath: AssetPaths.onBoarding3),
+        ],
       ),
     );
   }
@@ -54,7 +53,7 @@ class Reusable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: height,
       child: Image.asset(

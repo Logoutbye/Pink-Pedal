@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
-class OTP_Email_Num extends StatefulWidget {
-  const OTP_Email_Num({super.key});
+class OTPEmailNum extends StatefulWidget {
+  const OTPEmailNum({super.key});
 
   @override
-  State<OTP_Email_Num> createState() => _OTP_Email_NumState();
+  State<OTPEmailNum> createState() => _OTPEmailNumState();
 }
 
-class _OTP_Email_NumState extends State<OTP_Email_Num> {
+class _OTPEmailNumState extends State<OTPEmailNum> {
   @override
   Widget build(BuildContext context) {
     var height=MediaQuery.of(context).size.height;

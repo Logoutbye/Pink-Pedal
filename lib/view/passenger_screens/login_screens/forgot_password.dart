@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 
-class Forgot_password extends StatefulWidget {
-  const Forgot_password({super.key});
+class ForgotPassword extends StatefulWidget {
+  const ForgotPassword({super.key});
 
   @override
-  State<Forgot_password> createState() => _Forgot_passwordState();
+  State<ForgotPassword> createState() => _ForgotPasswordState();
 }
 
-class _Forgot_passwordState extends State<Forgot_password> {
+class _ForgotPasswordState extends State<ForgotPassword> {
   TextEditingController emailController=TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -55,12 +55,12 @@ class _Forgot_passwordState extends State<Forgot_password> {
                         
                         controller: emailController,
                         keyboardType: TextInputType.text,
-                          style: TextStyle(color: Colors.black),
+                          style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Enter Your Email Address',
                            hintStyle: Themetext.btextstyle,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
                         
                         ),
                       ),

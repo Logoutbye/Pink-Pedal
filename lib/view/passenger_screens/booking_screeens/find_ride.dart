@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/searchbar.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/components/custom_search_bar.dart';
 
-class Findride extends StatefulWidget {
-  const Findride({Key? key}) : super(key: key);
+class FindRide extends StatefulWidget {
+  const FindRide({Key? key}) : super(key: key);
 
   @override
-  State<Findride> createState() => _FindrideState();
+  State<FindRide> createState() => _FindRideState();
 }
 
-class _FindrideState extends State<Findride> {
+class _FindRideState extends State<FindRide> {
   List<Listrides> rideslist = [
     Listrides(
       leading:const Icon(Icons.electric_bike_sharp,
@@ -39,7 +39,7 @@ class _FindrideState extends State<Findride> {
   @override
   Widget build(BuildContext context) {
     // Trigger the bottom sheet when the widget is built
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {

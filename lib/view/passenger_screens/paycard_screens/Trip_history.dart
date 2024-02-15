@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
-import 'package:liveproject/utilis/searchbar.dart';
+import 'package:liveproject/utilis/components/custom_search_bar.dart';
 
 class TripHistory extends StatefulWidget {
   const TripHistory({Key? key}) : super(key: key);
@@ -59,7 +58,7 @@ class _TripHistoryState extends State<TripHistory> {
           TabBar(
               isScrollable: true,
           indicatorSize: TabBarIndicatorSize.tab,
-              labelPadding: EdgeInsets.symmetric(horizontal: 40),
+              labelPadding: const EdgeInsets.symmetric(horizontal: 40),
               tabs: months.map((month) {
                 return Tab(
                   text: month,
@@ -72,7 +71,7 @@ class _TripHistoryState extends State<TripHistory> {
                 children: [
                   for (var tripList in triplist)
                     Container(
-                      color: Color(0xFFECECEF),
+                      color: const Color(0xFFECECEF),
                       child: ListView.builder(
                         itemCount: tripList.length,
                         itemBuilder: (BuildContext context, int index) {
@@ -107,7 +106,7 @@ class Triplist extends StatelessWidget {
   final String? subHeading;
   final String? trailing;
 
-  Triplist({
+  const Triplist({super.key, 
     this.location,
     this.destination,
     this.image,
@@ -121,14 +120,14 @@ class Triplist extends StatelessWidget {
     var height=MediaQuery.of(context).size.height;
     var width=MediaQuery.of(context).size.height;
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.location_on),
-              SizedBox(width: 8),
+              const Icon(Icons.location_on),
+              const SizedBox(width: 8),
               Text(location ?? '',style: Themetext.atextstyle,),
             ],
           ),
@@ -136,13 +135,13 @@ class Triplist extends StatelessWidget {
            // Add spacing between location and destination
           Row(
             children: [
-              Icon(Icons.location_searching_outlined),
-              SizedBox(width: 8),
+              const Icon(Icons.location_searching_outlined),
+              const SizedBox(width: 8),
               Text(destination ?? '',style: Themetext.atextstyle,),
             ],
           ),
           SizedBox(height: height*0.01), 
-          Divider(
+          const Divider(
             color: Color(0xFFF0EFF2),
           ),
           // SizedBox(height: height*0.01), // Add spacing between destination and ListTile
@@ -155,7 +154,7 @@ class Triplist extends StatelessWidget {
             subtitle: Text(subHeading ?? ''),
             trailing: Text(trailing ?? ''),
           ),
-          SizedBox(height: 8), // Add spacing between ListTile and View Detail row
+          const SizedBox(height: 8), // Add spacing between ListTile and View Detail row
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -165,7 +164,7 @@ class Triplist extends StatelessWidget {
                 },
                 child: Text('View Detail',style: Themetext.atextstyle,)),
               // SizedBox(width: MediaQuery.of(context).size.width * 0.01),
-              Icon(Icons.arrow_forward_ios),
+              const Icon(Icons.arrow_forward_ios),
             ],
           )
         ],
@@ -195,16 +194,16 @@ class RideTripHistory {
 class TealContainer extends StatelessWidget {
   final Widget child;
 
-  TealContainer({required this.child});
+  const TealContainer({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xFFFFFFFF),
+        color: const Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(15),
       ),
-      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: child,
     );
   }

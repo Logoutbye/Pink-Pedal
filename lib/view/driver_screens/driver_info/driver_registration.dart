@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 
 class DeriverRegisteration extends StatefulWidget {
@@ -29,27 +29,27 @@ class _DeriverRegisterationState extends State<DeriverRegisteration> {
       body: Column(
         children:  [
           ListTile(
-            leading: Icon(Icons.person_2_outlined),
+            leading: const Icon(Icons.person_2_outlined),
             title: Text('Basic Info', style: Themetext.atextstyle),
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
           ),
-          Divider(color: Themecolor.Divider,),
+          const Divider(color: Themecolor.Divider,),
           ListTile(
-            leading: Icon(Icons.add_card_rounded),
+            leading: const Icon(Icons.add_card_rounded),
             title: Text('CNIC', style: Themetext.atextstyle),
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
           ),
-          Divider(color: Themecolor.Divider,),
+          const Divider(color: Themecolor.Divider,),
           ListTile(
-            leading: Icon(Icons.calendar_month),
+            leading: const Icon(Icons.calendar_month),
             title: Text('Basic Info', style: Themetext.atextstyle),
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
           ),
-          Divider(color: Themecolor.Divider,),
+          const Divider(color: Themecolor.Divider,),
           ListTile(
-            leading: Icon(Icons.car_crash_outlined),
+            leading: const Icon(Icons.car_crash_outlined),
             title: Text('Basic Info', style: Themetext.atextstyle),
-            trailing: Icon(Icons.arrow_forward_ios),
+            trailing: const Icon(Icons.arrow_forward_ios),
           ),
 SizedBox(height: height*0.05,),
           CustomElevatedButton(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String text;
@@ -10,7 +9,7 @@ class CustomElevatedButton extends StatelessWidget {
   TextStyle? textStyle;
   Size? size;
 
-  CustomElevatedButton({
+  CustomElevatedButton({super.key, 
     required this.text,
     required this.onPressed,
     this.color = Themecolor.elvatedButton,

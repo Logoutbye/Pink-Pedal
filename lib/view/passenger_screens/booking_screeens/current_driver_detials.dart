@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
-import 'package:liveproject/utilis/searchbar.dart';
+import 'package:liveproject/utilis/components/custom_search_bar.dart';
 import 'package:intl/intl.dart';
 
-class currentDeriverDetails extends StatefulWidget {
-  const currentDeriverDetails({Key? key}) : super(key: key);
+class CurrentDeriverDetails extends StatefulWidget {
+  const CurrentDeriverDetails({Key? key}) : super(key: key);
 
   @override
-  State<currentDeriverDetails> createState() => _currentDeriverDetailsState();
+  State<CurrentDeriverDetails> createState() => _CurrentDeriverDetailsState();
 }
 
-class _currentDeriverDetailsState extends State<currentDeriverDetails> {
+class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
   String phonNo = '03169913414';
   String deriverName = 'Younis Arif';
   String carName = 'Civic';
@@ -55,7 +55,7 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
             child: Container(
               height: height * 0.64,
               width: width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -76,13 +76,13 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                             leading: CircleAvatar(
                               maxRadius: width*0.04,
                               backgroundImage:
-                                 AssetImage(AssetPaths.image),
+                                 const AssetImage(AssetPaths.image),
                             ),
                             title: Text(deriverName),
                             subtitle: Row(
                               children: [
-                                Icon(Icons.call),
-                                SizedBox(width: 5),
+                                const Icon(Icons.call),
+                                const SizedBox(width: 5),
                                 Text(phonNo),
                               ],
                             ),
@@ -94,11 +94,11 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                           height: height*0.06,
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color: Color(0xFF9E9E9E),
+                                color: const Color(0xFF9E9E9E),
                                 width: 2), // Add border color and width
                             borderRadius: BorderRadius.circular(15),
                           ),
-                          child: Icon(Icons.message_outlined,
+                          child: const Icon(Icons.message_outlined,
                               size: 30, color: Themecolor.container),
                         ),
                         SizedBox(
@@ -109,11 +109,11 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                           height: height*0.06,
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color:Color(0xFF9E9E9E),
+                                color:const Color(0xFF9E9E9E),
                                 width: 2), // Add border color and width
                             borderRadius: BorderRadius.circular(15),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             Icons.add_call,
                             size: 30,
                             color: Themecolor.container,
@@ -125,13 +125,13 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                     SizedBox(
                       height: height * 0.01,
                     ),
-                    Divider(
+                    const Divider(
                       color: Color(0xFFEBEBEB),
                     ),
                     Text(
                       'Car Info',
                       style: Themetext.btextstyle.copyWith(
-                          color: Color(0xFF000000),
+                          color: const Color(0xFF000000),
                           fontWeight: FontWeight.w600),
                     ),
                     SizedBox(
@@ -154,36 +154,36 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                               TextSpan(
                                   text: 'car:',
                                   style: Themetext.btextstyle.copyWith(
-                                      color: Color(0xFF000000),
+                                      color: const Color(0xFF000000),
                                       fontWeight: FontWeight.w400)),
                               TextSpan(
                                   text: carName,
                                   style: Themetext.btextstyle.copyWith(
-                                      color: Color(0xFF000000),
+                                      color: const Color(0xFF000000),
                                       fontWeight: FontWeight.w600))
                             ])),
                             Text.rich(TextSpan(children: [
                               TextSpan(
                                   text: 'Color:',
                                   style: Themetext.btextstyle.copyWith(
-                                      color: Color(0xFF000000),
+                                      color: const Color(0xFF000000),
                                       fontWeight: FontWeight.w400)),
                               TextSpan(
                                   text: carColor,
                                   style: Themetext.btextstyle.copyWith(
-                                      color: Color(0xFF000000),
+                                      color: const Color(0xFF000000),
                                       fontWeight: FontWeight.w600))
                             ])),
                             Text.rich(TextSpan(children: [
                               TextSpan(
                                   text: 'Number:',
                                   style: Themetext.btextstyle.copyWith(
-                                      color: Color(0xFF000000),
+                                      color: const Color(0xFF000000),
                                       fontWeight: FontWeight.w400)),
                               TextSpan(
                                   text: carNum,
                                   style: Themetext.btextstyle.copyWith(
-                                      color: Color(0xFF000000),
+                                      color: const Color(0xFF000000),
                                       fontWeight: FontWeight.w600))
                             ]))
                           ],
@@ -193,11 +193,11 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                     SizedBox(
                       height: height * 0.01,
                     ),
-                    Divider(
+                    const Divider(
                       color: Color(0xFFEBEBEB),
                     ),
                     ListTile(
-                      leading: Icon(
+                      leading: const Icon(
                         Icons.location_on,
                         color: Themecolor.icon,
                       ),
@@ -207,7 +207,7 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                       ),
                     ),
                     ListTile(
-                      leading: Icon(
+                      leading: const Icon(
                         Icons.location_on,
                         color: Themecolor.icon2,
                       ),
@@ -237,7 +237,7 @@ class _currentDeriverDetailsState extends State<currentDeriverDetails> {
                           size: width * 0.05,
                         ),
                         SizedBox(width: width * 0.01),
-                        Text('$formattedtime',
+                        Text(formattedtime,
                             style: Themetext.Etextstyle.copyWith(
                               fontWeight: FontWeight.w400,
                             )),

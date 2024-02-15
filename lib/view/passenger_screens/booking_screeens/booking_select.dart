@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
-import 'package:liveproject/utilis/searchbar.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
+import 'package:liveproject/utilis/components/custom_search_bar.dart';
 
 class BookingSelect extends StatefulWidget {
   const BookingSelect({super.key});
@@ -15,7 +15,7 @@ class BookingSelect extends StatefulWidget {
 class _BookingSelectState extends State<BookingSelect> {
   @override
   Widget build(BuildContext context) {
-      WidgetsBinding.instance!.addPostFrameCallback((_) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
       showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
@@ -36,7 +36,7 @@ class _BookingSelectState extends State<BookingSelect> {
   }
   Widget buildSheetContent(){
     return Container(
-      margin: EdgeInsets.all(30),
+      margin: const EdgeInsets.all(30),
       
       child: Column(
       children: [
@@ -50,26 +50,26 @@ class _BookingSelectState extends State<BookingSelect> {
       ],
         ),
         SizedBox(height: MediaQuery.of(context).size.height*0.01,),
-        Divider(color: Color(0xFFF1EDED),
+        const Divider(color: Color(0xFFF1EDED),
         ),
         ListTile(
-          leading: Icon(Icons.share_location_rounded,
+          leading: const Icon(Icons.share_location_rounded,
             color: Themecolor.selectedItem),
           title: Text('My Current Location',
           style: Themetext.atextstyle.copyWith(
             fontWeight: FontWeight.w600
           ),),
-          subtitle: Text('35 Oak Ave. San Andreas.'),
+          subtitle: const Text('35 Oak Ave. San Andreas.'),
           
         ),
            ListTile(
-          leading: Icon(Icons.location_on,
+          leading: const Icon(Icons.location_on,
           color: Themecolor.selectedItem,),
           title: Text('United Bank Limited',
            style: Themetext.atextstyle.copyWith(
             fontWeight: FontWeight.w600
           )),
-          subtitle: Text('Bank Square, AL 63652'),
+          subtitle: const Text('Bank Square, AL 63652'),
           
         ),
            SizedBox(height: MediaQuery.of(context).size.height*0.03,),

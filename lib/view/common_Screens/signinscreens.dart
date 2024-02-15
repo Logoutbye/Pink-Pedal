@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 
 // import 'package:liveproject/view/screens/login_screens/otp.dart';
 
 class SigninScreen extends StatefulWidget {
-  const SigninScreen({Key? key});
+  const SigninScreen({super.key});
 
   @override
   State<SigninScreen> createState() => _SigninScreenState();
@@ -24,15 +24,15 @@ class _SigninScreenState extends State<SigninScreen> {
       appBar: AppBar(
         
         leading: CircleAvatar(
-          backgroundColor: Color(0xFF483285),
+          backgroundColor: const Color(0xFF483285),
           foregroundColor: Colors.white54,
           radius: 10,
           child: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
           ),
         ),
-        title: Text(
+        title: const Text(
           'Sign in',
           style:
               TextStyle(color: Colors.white), // Set text color for AppBar title
@@ -48,15 +48,15 @@ class _SigninScreenState extends State<SigninScreen> {
               
               height: height*0.12,
               width: double.infinity,
-              padding: EdgeInsets.all(15),
-              color: Color(0xFF03008B),
+              padding: const EdgeInsets.all(15),
+              color: const Color(0xFF03008B),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Hi, Welcome Back! 👋',
                     style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      color: Color(0xFFFFFFFF)
+                      color: const Color(0xFFFFFFFF)
                     ),
                   ),
                 SizedBox(height: height*0.01,),
@@ -80,7 +80,7 @@ class _SigninScreenState extends State<SigninScreen> {
               SizedBox(height: height * 0.01),
                   Container(
                        height: height*0.07,
-                  padding: EdgeInsets.only(left: 8),
+                  padding: const EdgeInsets.only(left: 8),
                   decoration: BoxDecoration(
                     color: Themecolor.textfield,
                     borderRadius: BorderRadius.circular(15),
@@ -116,12 +116,12 @@ class _SigninScreenState extends State<SigninScreen> {
                       
                       controller: passtext,
                       keyboardType: TextInputType.text,
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Enter Your Password',
                          hintStyle: Themetext.btextstyle,
-                          contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                          contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
                       
                       ),
                     ),
@@ -149,7 +149,7 @@ class _SigninScreenState extends State<SigninScreen> {
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium!
-                                .copyWith(color: Color(0xFF03008B))),
+                                .copyWith(color: const Color(0xFF03008B))),
                       )
                     ],
                   ),
@@ -166,7 +166,7 @@ class _SigninScreenState extends State<SigninScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Don’t have an account? '),
+                const Text('Don’t have an account? '),
                 GestureDetector(
                   onTap: (){
                 
@@ -177,7 +177,7 @@ class _SigninScreenState extends State<SigninScreen> {
                     },
                     child: Text('Signup',
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color:Color(0xFF03008B)
+                      color:const Color(0xFF03008B)
                     ),),
                   ),
                 ),

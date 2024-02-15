@@ -1,22 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyAddress(),
-    );
-  }
-}
 
 class MyAddress extends StatefulWidget {
   const MyAddress({Key? key}) : super(key: key);
@@ -128,8 +115,8 @@ class _MyAddressState extends State<MyAddress> {
                           });
                         },
                         child: isSelected
-                            ? Icon(Icons.safety_check)
-                            : Icon(Icons.abc),
+                            ? const Icon(Icons.safety_check)
+                            : const Icon(Icons.abc),
                         // child: isSelected ? trailingIcon : null,
                       ),
                     ),

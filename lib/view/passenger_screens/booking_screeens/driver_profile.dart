@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
 
 class DriverProfile extends StatefulWidget {
@@ -111,7 +111,7 @@ class _DriverProfileState extends State<DriverProfile> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.star,
                       color: Colors.amber,
                     ),
@@ -136,7 +136,7 @@ class _DriverProfileState extends State<DriverProfile> {
                 SizedBox(width: width * 0.2),
                 Expanded(
                   child: ListTile(
-                    leading: Icon(Icons.car_crash_outlined, size: 30),
+                    leading: const Icon(Icons.car_crash_outlined, size: 30),
                     title: Text('410', style: Themetext.atextstyle),
                     subtitle: Text('Rides Shared', style: Themetext.btextstyle),
                   ),
@@ -170,7 +170,7 @@ class _DriverProfileState extends State<DriverProfile> {
 
                   return ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: leading?.image!,
+                      backgroundImage: leading?.image,
                       maxRadius: 30,
                       
                     ),
@@ -180,8 +180,8 @@ class _DriverProfileState extends State<DriverProfile> {
                         Text(title,style: Themetext.Etextstyle,),
                          Row(
                       children: [
-                        Icon(Icons.star,color: Colors.amber,),
-                        SizedBox(
+                        const Icon(Icons.star,color: Colors.amber,),
+                        const SizedBox(
                             width:
                                 4), // Add some spacing between the icon and text
                         Text('$title1 ($title2 ratings)',style: Themetext.btextstyle,),
@@ -189,7 +189,7 @@ class _DriverProfileState extends State<DriverProfile> {
                     ),
                       ],
                     ),
-                    subtitle:Text(description!,style: Themetext.btextstyle.copyWith(color: Color(0xFF6C6C70)),),
+                    subtitle:Text(description!,style: Themetext.btextstyle.copyWith(color: const Color(0xFF6C6C70)),),
                     
                     trailing: Text('$trailing hours ago'),
                   );

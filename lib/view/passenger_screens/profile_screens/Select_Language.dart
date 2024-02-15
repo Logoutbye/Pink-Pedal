@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 
 class Language extends StatefulWidget {
@@ -59,7 +59,7 @@ class _LanguageState extends State<Language> {
                   'English (UK)',
                   style: Themetext.atextstyle,
                 ),
-                Icon(Icons.check_circle_outlined),
+                const Icon(Icons.check_circle_outlined),
               ],
             ),
             SizedBox(
@@ -78,7 +78,7 @@ class _LanguageState extends State<Language> {
                   'English ',
                   style: Themetext.atextstyle,
                 ),
-                Icon(Icons.check_circle_outlined),
+                const Icon(Icons.check_circle_outlined),
               ],
             ),
             SizedBox(
@@ -97,7 +97,7 @@ class _LanguageState extends State<Language> {
                   'Bahasa Indonesia',
                   style: Themetext.atextstyle,
                 ),
-                Icon(Icons.check_circle_outlined),
+                const Icon(Icons.check_circle_outlined),
               ],
             ),
             // Existing code remains unchanged

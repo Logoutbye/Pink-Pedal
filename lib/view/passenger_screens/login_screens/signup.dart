@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _SignupState extends State<Signup> {
+class _SignUpState extends State<SignUp> {
    TextEditingController emailtext=TextEditingController();
   TextEditingController passtext=TextEditingController();
 
@@ -24,12 +24,12 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       appBar: AppBar(
         leading: CircleAvatar(
-          backgroundColor: Color(0xFF483285),
+          backgroundColor: const Color(0xFF483285),
           foregroundColor: Colors.white54,
           radius: 10,
           child: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
           ),
         ),
         title: Text('Sign up', style: Theme.of(context).textTheme.bodyMedium
@@ -42,8 +42,8 @@ class _SignupState extends State<Signup> {
           children: [
             Container(
               width: double.infinity,
-              padding: EdgeInsets.all(15),
-              color: Color(0xFF03008B),
+              padding: const EdgeInsets.all(15),
+              color: const Color(0xFF03008B),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,7 +52,7 @@ class _SignupState extends State<Signup> {
                     style: Theme.of(context)
                         .textTheme
                         .bodyLarge!
-                        .copyWith(color: Color(0xFFFFFFFF)),
+                        .copyWith(color: const Color(0xFFFFFFFF)),
                   ),
                   SizedBox(height: height*0.01,),
                   Text('Please to fill up the data to create your account',
@@ -60,7 +60,7 @@ class _SignupState extends State<Signup> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -74,7 +74,7 @@ class _SignupState extends State<Signup> {
                 SizedBox(height: height * 0.01),
                     Container(
                          height: height*0.07,
-                    padding: EdgeInsets.only(left: 8),
+                    padding: const EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       color: Themecolor.textfield,
                       borderRadius: BorderRadius.circular(15),
@@ -110,12 +110,12 @@ class _SignupState extends State<Signup> {
                         
                         controller: passtext,
                         keyboardType: TextInputType.text,
-                          style: TextStyle(color: Colors.black),
+                          style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Enter Your phone Number',
                            hintStyle: Themetext.btextstyle,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
                         
                         ),
                       ),
@@ -138,12 +138,12 @@ class _SignupState extends State<Signup> {
                         
                         controller: passtext,
                         keyboardType: TextInputType.text,
-                          style: TextStyle(color: Colors.black),
+                          style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Enter Your Email Address',
                            hintStyle: Themetext.btextstyle,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
                         
                         ),
                       ),
@@ -166,12 +166,12 @@ class _SignupState extends State<Signup> {
                         
                         controller: passtext,
                         keyboardType: TextInputType.text,
-                          style: TextStyle(color: Colors.black),
+                          style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Enter Your Password',
                            hintStyle: Themetext.btextstyle,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
                         
                         ),
                       ),

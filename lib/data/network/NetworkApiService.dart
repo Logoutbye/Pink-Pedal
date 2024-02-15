@@ -37,7 +37,7 @@ class NetworkApiService extends BaseApiServices {
       Response response = await post(
         Uri.parse(url),
         body: data
-      ).timeout(Duration(seconds: 10));
+      ).timeout(const Duration(seconds: 10));
 
       responseJson = returnResponse(response);
     }on SocketException {
@@ -60,8 +60,7 @@ class NetworkApiService extends BaseApiServices {
       case 404:
         throw UnauthorisedException(response.body.toString());
       default:
-        throw FetchDataException('Error accured while communicating with server'+
-            'with status code' +response.statusCode.toString());
+        throw FetchDataException('Error accured while communicating with serverwith status code${response.statusCode}');
 
     }
   }

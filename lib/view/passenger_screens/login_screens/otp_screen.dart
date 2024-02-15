@@ -8,15 +8,16 @@ import 'package:liveproject/utilis/theme/theme_text.dart';
 
 class Otpscreen extends StatefulWidget {
 
- final bool iscreateAccount; // Add a parameter to specify the user's role
 
-  const Otpscreen({Key? key, required this.iscreateAccount}) : super(key: key);
+  const Otpscreen({Key? key, }) : super(key: key);
 
   @override
   State<Otpscreen> createState() => _OtpscreenState();
 }
 
 class _OtpscreenState extends State<Otpscreen> {
+   final bool iscreateAccount =false; // Add a parameter to specify the user's role
+
   @override
   Widget build(BuildContext context) {
     final height=MediaQuery.of(context).size.height;
@@ -32,7 +33,7 @@ class _OtpscreenState extends State<Otpscreen> {
             Center(
               child: Text('Enter OTP',
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        color: Color(0xFF1E1E1E),
+                        color: const Color(0xFF1E1E1E),
                       )),
             ),
             RichText(
@@ -42,7 +43,7 @@ class _OtpscreenState extends State<Otpscreen> {
                       text:
                           'We have just sent you 4 digit code via your email ',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                            color: Color(0xFF9CA4AB),
+                            color: const Color(0xFF9CA4AB),
                           )),
                   TextSpan(
                       text: 'example@gmail.com',
@@ -69,24 +70,18 @@ class _OtpscreenState extends State<Otpscreen> {
                   ],
                 ),
               )),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               CustomElevatedButton(
                 text: 'continue', 
-                onPressed: (){
-                   if (widget.iscreateAccount) {
-                  Navigator.pushNamed(context, RoutesName.signInUser);
-                } else {
-               Navigator.pushNamed(context, RoutesName.createNewPassword);
-                }
-                }),
-                SizedBox(height: 20,),
+                onPressed: ()=>Navigator.pushNamed(context, RoutesName.createNewPassword)),
+                const SizedBox(height: 20,),
               Text.rich(
   TextSpan(
     children: [
       TextSpan(
         text: 'Didn’t receive code? ',
         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-          color: Color(0xFF9CA4AB),
+          color: const Color(0xFF9CA4AB),
         ),
       ),
       TextSpan(
@@ -108,7 +103,7 @@ SizedBox(height: height*0.01,),
       TextSpan(
         text: 'Wrong Email Address? ',
         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-          color: Color(0xFF9CA4AB),
+          color: const Color(0xFF9CA4AB),
         ),
       ),
       TextSpan(
@@ -164,9 +159,9 @@ class _otpcodeState extends State<otpcode> {
                       inputFormatters: [
                         LengthLimitingTextInputFormatter(1),
                       ],
-                      style:TextStyle(color: Colors.black,
+                      style:const TextStyle(color: Colors.black,
                       fontSize: 15),
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         fillColor: Color(0xFF9CA4AB),
                         filled: true
                       ),

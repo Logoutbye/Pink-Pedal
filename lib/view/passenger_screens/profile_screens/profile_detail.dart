@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
 
 class ProfileDetail extends StatefulWidget {
@@ -214,7 +214,7 @@ class _ProfileDetailState extends State<ProfileDetail> {
               onTap: ()=>Navigator.pushNamed(context, RoutesName.helpAndSupport),
               child: Row(
                 children: [
-                  Icon(Icons.info_outlined),
+                  const Icon(Icons.info_outlined),
                   SizedBox(
                     width: width * 0.02,
                   ),
@@ -263,12 +263,12 @@ class _ProfileDetailState extends State<ProfileDetail> {
                 height: MediaQuery.of(context).size.height * 0.02,
               ), // Use SizedBox.fromSize for spacing
               CustomElevatedButton(
-                  size: Size(45, 20), text: 'Cancel', onPressed: () {}),
+                  size: const Size(45, 20), text: 'Cancel', onPressed: () {}),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               CustomElevatedButton(
-                  size: Size(30, 15),
+                  size: const Size(30, 15),
                   color: Themecolor.container2,
                   textColor: Themecolor.Warning,
                   text: 'Log Out',

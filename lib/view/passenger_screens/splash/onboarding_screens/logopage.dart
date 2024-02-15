@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
 
 
@@ -17,7 +17,7 @@ class _LogoPageState extends State<LogoPage> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), ()=>Navigator.pushNamed(context, RoutesName.onBoarding));
+    Timer(const Duration(seconds: 2), ()=>Navigator.pushNamed(context, RoutesName.onBoarding));
   }
 
   @override
@@ -27,7 +27,7 @@ class _LogoPageState extends State<LogoPage> {
         child: Column(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [ Color(0xFF03008B), Color(0xFF0f0f0f)],
                   begin: Alignment.topCenter,
@@ -49,7 +49,7 @@ class _LogoPageState extends State<LogoPage> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 3,
-              color: Color(0xFF0f0f0f),
+              color: const Color(0xFF0f0f0f),
             ),
           ],
         ),

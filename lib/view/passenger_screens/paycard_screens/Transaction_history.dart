@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
-import 'package:liveproject/utilis/searchbar.dart';
+import 'package:liveproject/utilis/components/custom_search_bar.dart';
 
 class TransactionHistory extends StatefulWidget {
   const TransactionHistory({Key? key}) : super(key: key);
@@ -49,7 +48,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
             TabBar(
               isScrollable: true,
           indicatorSize: TabBarIndicatorSize.tab,
-              labelPadding: EdgeInsets.symmetric(horizontal: 40),
+              labelPadding: const EdgeInsets.symmetric(horizontal: 40),
               tabs: months.map((month) {
                 return Tab(
                   text: month,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
 
 class AddDestination extends StatefulWidget {
   const AddDestination({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _AddDestinationState extends State<AddDestination> {
   @override
   Widget build(BuildContext context) {
     // Trigger the bottom sheet when the widget is built
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
@@ -43,7 +43,7 @@ class _AddDestinationState extends State<AddDestination> {
                 image: AssetImage('assets/images/destination.png'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
-                  Color(0xFF1717253D),
+                  Color(0xff1717253d),
                   BlendMode.darken,
                 ),
               ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/icons.dart';
-import 'package:liveproject/utilis/searchbar.dart';
+import 'package:liveproject/utilis/components/custom_search_bar.dart';
 
 class HelpAndSupport extends StatefulWidget {
   const HelpAndSupport({super.key});
@@ -38,7 +38,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
             ),
             Expanded(
               child: ListView(
-                children: <Widget>[
+                children: const <Widget>[
                   FAQItem(
                     question: 'How if I do not have the License?',
                     answer: '''Check if you can change it. 
@@ -82,7 +82,7 @@ class FAQItem extends StatelessWidget {
   final String question;
   final String answer;
 
-  FAQItem({required this.question, required this.answer});
+  const FAQItem({super.key, required this.question, required this.answer});
 
   @override
   Widget build(BuildContext context) {

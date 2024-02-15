@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 
-class DetailScreen extends StatefulWidget {
+class MessageDetailScreen extends StatefulWidget {
+  const MessageDetailScreen({super.key});
+
   @override
-  _DetailScreenState createState() => _DetailScreenState();
+  _MessageDetailScreenState createState() => _MessageDetailScreenState();
 }
 
-class _DetailScreenState extends State<DetailScreen> {
+class _MessageDetailScreenState extends State<MessageDetailScreen> {
   final List<Map<String, dynamic>> messages = [
     {'text': 'Hello!', 'issendmessage': true, 'time': DateTime.now()},
     {'text': 'Hi there!', 'issendmessage': false, 'time': DateTime.now()},
@@ -63,7 +65,7 @@ class _DetailScreenState extends State<DetailScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back),
+        leading: const Icon(Icons.arrow_back),
         title: Text('Chat Details',style: Themetext.atextstyle,),
       ),
       body: Column(
@@ -88,7 +90,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         decoration: BoxDecoration(
                           color: isSentMessage
                               ? Themecolor.selectedItem
-                              : Color(0xFFF7F9FD),
+                              : const Color(0xFFF7F9FD),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: Text(
@@ -96,12 +98,12 @@ class _DetailScreenState extends State<DetailScreen> {
                           style: isSentMessage
                               ? Theme.of(context).textTheme.bodyMedium
                               : Themetext.btextstyle
-                                  .copyWith(color: Color(0xFF8F95AB)),
+                                  .copyWith(color: const Color(0xFF8F95AB)),
                         ),
                       ),
                       Text(
-                        '${_formatTime(message['time'])}',
-                        style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                        _formatTime(message['time']),
+                        style: const TextStyle(fontSize: 12.0, color: Colors.grey),
                       ),
                     ],
                   ),
@@ -117,7 +119,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Color(0xFFF7F9FD),
+                      color: const Color(0xFFF7F9FD),
                     ),
                     child: TextField(
                       controller: messageController,

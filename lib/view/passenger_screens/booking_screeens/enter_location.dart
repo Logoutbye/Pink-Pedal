@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/view/passenger_screens/booking_screeens/my_booking.dart';
 import 'package:liveproject/view/passenger_screens/chatting_screens/allMessages_screen.dart';
-import 'package:liveproject/view/passenger_screens/paycard_screens/Dabit_card.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/MyProfile.dart';
+import 'package:liveproject/view/passenger_screens/paycard_screens/debit_card.dart';
+import 'package:liveproject/view/passenger_screens/profile_screens/my_profile.dart';
 
 
 class EnterLocation extends StatefulWidget {
@@ -19,10 +18,10 @@ class _EnterLocationState extends State<EnterLocation> {
   int current_Index=0;
   final List<Widget> screens=[
     HomeWidget(),
-    Mybooking(),
-    AllMessages(),
-    DebitCard(),
-    MyProfile()
+    const MyBooking(),
+    const AllMessages(),
+    const DebitCard(),
+    const MyProfile()
 
   ];
 
@@ -113,7 +112,7 @@ class HomeWidget extends StatelessWidget {
         children: [
           TextField(
             decoration: InputDecoration(
-                contentPadding: EdgeInsets.all(8),
+                contentPadding: const EdgeInsets.all(8),
                 labelText: '562/11-A',
                 prefixIcon:const Icon(Icons.location_searching),
                 labelStyle: Themetext.atextstyle,
@@ -125,9 +124,9 @@ class HomeWidget extends StatelessWidget {
           ),
           TextField(
             decoration: InputDecoration(
-                contentPadding: EdgeInsets.all(8),
+                contentPadding: const EdgeInsets.all(8),
                 labelText: 'Third wave',
-                prefixIcon: Icon(Icons.location_on),
+                prefixIcon: const Icon(Icons.location_on),
                 labelStyle: Themetext.atextstyle,
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),

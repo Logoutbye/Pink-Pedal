@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/Named_Routes.dart';
-import 'package:liveproject/utilis/Themesdata/elevatedbutton/elevatedbutton.dart';
-import 'package:liveproject/utilis/Themesdata/theme_text.dart';
-import 'package:liveproject/utilis/Themesdata/themecolors.dart';
+import 'package:liveproject/utilis/Routes/routes_name.dart';
+import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/utilis/theme/theme_text.dart';
+import 'package:liveproject/utilis/theme/themecolors.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
 import 'package:liveproject/utilis/constant/date_time.dart';
 
-class Mybooking extends StatefulWidget {
-  const Mybooking({super.key});
+class MyBooking extends StatefulWidget {
+  const MyBooking({super.key});
 
   @override
-  State<Mybooking> createState() => _MybookingState();
+  State<MyBooking> createState() => _MyBookingState();
 }
 
-class _MybookingState extends State<Mybooking> {
+class _MyBookingState extends State<MyBooking> {
   String deriverName = 'younus arif';
   String rideName = 'civic';
   String distance = '3.3km';
@@ -47,7 +47,7 @@ class _MybookingState extends State<Mybooking> {
                     child: ListTile(
                       leading: CircleAvatar(
                         maxRadius: width * 0.05,
-                        backgroundImage: AssetImage(AssetPaths.image),
+                        backgroundImage: const AssetImage(AssetPaths.image),
                       ),
                       title: Text(
                         deriverName,
@@ -65,7 +65,7 @@ class _MybookingState extends State<Mybooking> {
                       CustomElevatedButton(
                         text: 'contact',
                         onPressed: () {},
-                        size: Size(80.0, 20.0),
+                        size: const Size(80.0, 20.0),
                       ),
                       Text(
                         'MR-AF-212',
@@ -86,7 +86,7 @@ class _MybookingState extends State<Mybooking> {
                 children: [
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.location_on_outlined,
                         size: 30,
                       ),
@@ -101,7 +101,7 @@ class _MybookingState extends State<Mybooking> {
                   ),
                   Row(
                     children: [
-                      Icon(Icons.timer_outlined, size: 30),
+                      const Icon(Icons.timer_outlined, size: 30),
                       SizedBox(
                         width: width * 0.001,
                       ),
@@ -113,7 +113,7 @@ class _MybookingState extends State<Mybooking> {
                   ),
                   Row(
                     children: [
-                      Icon(Icons.add_card_sharp, size: 30),
+                      const Icon(Icons.add_card_sharp, size: 30),
                       SizedBox(
                         width: width * 0.001,
                       ),
@@ -151,7 +151,7 @@ class _MybookingState extends State<Mybooking> {
             SizedBox(
               height: height * 0.02,
             ),
-            Divider(
+            const Divider(
               color: Themecolor.Divider,
             ),
             Padding(
@@ -159,7 +159,7 @@ class _MybookingState extends State<Mybooking> {
               child: Text(
                 'Booking details',
                 style: Themetext.btextstyle.copyWith(
-                    color: Color(0xFF000000),
+                    color: const Color(0xFF000000),
                     fontWeight: FontWeight.w600,
                     fontSize: 16),
               ),
@@ -168,22 +168,22 @@ class _MybookingState extends State<Mybooking> {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: height * 0.22,
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    borderRadius: const BorderRadius.all(Radius.circular(15)),
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
                           color: Colors.grey.shade300,
                           blurRadius: 20,
                           spreadRadius: 1,
-                          offset: Offset(0, 4))
+                          offset: const Offset(0, 4))
                     ]),
                 child: Column(
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.location_on),
+                        const Icon(Icons.location_on),
                         SizedBox(
                           width: width * 0.01,
                         ),
@@ -250,7 +250,7 @@ class _MybookingState extends State<Mybooking> {
                 height: height * 0.1,
                 decoration: BoxDecoration(
                     borderRadius:const BorderRadius.all(Radius.circular(15)),
-                    color: Color(0xFFFFFFFF),
+                    color: const Color(0xFFFFFFFF),
                     boxShadow: [
                       BoxShadow(
                           color: Colors.grey.shade300,
@@ -264,7 +264,7 @@ class _MybookingState extends State<Mybooking> {
                     SizedBox(
                       width: width * 0.01,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.payments_outlined,
                       color: Themecolor.selectedItem,
                     ),
@@ -294,7 +294,7 @@ class _MybookingState extends State<Mybooking> {
             ),
             Center(
               child: CustomElevatedButton(
-                  color: Color(0xFFCBC9C5),
+                  color: const Color(0xFFCBC9C5),
                   text: 'Cancel',
                   textStyle:const TextStyle(color: Colors.black),
                   onPressed: () {
@@ -377,7 +377,7 @@ class _MybookingState extends State<Mybooking> {
                   style: Themetext.Etextstyle.copyWith(color:const Color(0xFF9CA4AB)),),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.02,),
                   CustomElevatedButton(text: 'Pay Now1', onPressed: ()=> Navigator.pushNamed(context, RoutesName.rideCompleted),
-                  size: Size(60, 30),)
+                  size: const Size(60, 30),)
             ],
           
           ),
