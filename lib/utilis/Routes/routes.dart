@@ -12,6 +12,7 @@ import 'package:liveproject/view/passenger_screens/booking_screeens/ride_complet
 import 'package:liveproject/view/passenger_screens/chatting_screens/allMessages_screen.dart';
 import 'package:liveproject/view/passenger_screens/login_screens/create_new_password.dart';
 import 'package:liveproject/view/passenger_screens/login_screens/forgot_password.dart';
+import 'package:liveproject/view/passenger_screens/login_screens/otp.dart';
 import 'package:liveproject/view/passenger_screens/login_screens/otp_screen.dart';
 import 'package:liveproject/view/passenger_screens/login_screens/otpcode_email_num.dart';
 import 'package:liveproject/view/passenger_screens/login_screens/signup.dart';
@@ -41,7 +42,7 @@ class Routes {
       case RoutesName.signInUser:
         return SlideTransitionPage(page: const SigninScreen());
       case RoutesName.otpCode:
-        return SlideTransitionPage(page: const Otpscreen());
+        return SlideTransitionPage(page: const Otpscreen(isCreateAccount: true,));
       case RoutesName.otpEmailNum:
         return SlideTransitionPage(page: const OTPEmailNum());
       case RoutesName.forGotPassword:
