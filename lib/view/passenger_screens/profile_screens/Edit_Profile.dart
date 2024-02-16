@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:liveproject/utilis/components/elevatedbutton.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
-import 'package:liveproject/utilis/constant/icons.dart';
+import 'package:liveproject/import_all.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);

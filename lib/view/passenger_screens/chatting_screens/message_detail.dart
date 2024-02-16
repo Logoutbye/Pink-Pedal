@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
+
+import 'package:liveproject/import_all.dart';
 
 class MessageDetailScreen extends StatefulWidget {
   const MessageDetailScreen({super.key});

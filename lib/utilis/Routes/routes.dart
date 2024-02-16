@@ -1,32 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/routes/routes_name.dart';
-import 'package:liveproject/utilis/routes/slide_transition_page.dart';
-import 'package:liveproject/view/driver_screens/SplashScreen.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/add_destination.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/driver_profile.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/enter_location.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/feedback_screen.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/find_ride.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/my_booking.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/ride_completed.dart';
-import 'package:liveproject/view/passenger_screens/chatting_screens/allMessages_screen.dart';
-import 'package:liveproject/view/passenger_screens/login_screens/create_new_password.dart';
-import 'package:liveproject/view/passenger_screens/login_screens/forgot_password.dart';
-import 'package:liveproject/view/passenger_screens/login_screens/otp_screen.dart';
-import 'package:liveproject/view/passenger_screens/login_screens/otpcode_email_num.dart';
-import 'package:liveproject/view/passenger_screens/login_screens/signup.dart';
-import 'package:liveproject/view/passenger_screens/paycard_screens/debit_card.dart';
-import 'package:liveproject/view/passenger_screens/paycard_screens/pay_now.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/Edit_Profile.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/My_address.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/Select_Language.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/add_new_adress.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/help_and_support.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/my_profile.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/profile_detail.dart';
-import 'package:liveproject/view/passenger_screens/splash/onboarding_screens/firstscreen.dart';
-import 'package:liveproject/view/passenger_screens/splash/onboarding_screens/logopage.dart';
-import 'package:liveproject/view/common_screens/signinscreens.dart';
+import 'package:liveproject/import_all.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -94,9 +66,39 @@ class Routes {
   }
 }
 
-
+//////////////////////////   Help  ///////////////////////////////////
 
 //  Navigator.push(
 //                           context,
 //                           SlideTransitionPage(
 //                               applySlideTransition: true, page: AboutScreen()));
+
+///////////////// how to pass arguments in name contructor
+///step 1
+// class MovieDetailsArguments {
+//   final Movies movie;
+//   final bool isLoading;
+//   final bool isSent;
+//   final String name;
+//   MovieDetailsArguments({
+//     required this.movie,
+//     required this.isLoading,
+//     required this.isSent,
+//     required this.name,
+//   });
+// }
+// step 2
+// case RoutesName.movieDetails:
+//   final MovieDetailsArguments args = settings.arguments as MovieDetailsArguments;
+//   return SlideTransitionPage(page: MovieDetailsScreen(movieDetailsArgs: args));
+// step 3
+// Navigator.pushNamed(
+//   context,
+//   RoutesName.movieDetails,
+//   arguments: MovieDetailsArguments(
+//     movie: yourMoviesInstance,
+//     isLoading: true,
+//     isSent: false,
+//     name: "John Doe",
+//   ),
+// );

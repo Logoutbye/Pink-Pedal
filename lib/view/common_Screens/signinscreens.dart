@@ -1,10 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/routes_name.dart';
-import 'package:liveproject/utilis/components/elevatedbutton.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
+import 'package:liveproject/import_all.dart';
 
-// import 'package:liveproject/view/screens/login_screens/otp.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});

@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
-import 'package:liveproject/view/passenger_screens/booking_screeens/my_booking.dart';
-import 'package:liveproject/view/passenger_screens/chatting_screens/allMessages_screen.dart';
-import 'package:liveproject/view/passenger_screens/paycard_screens/debit_card.dart';
-import 'package:liveproject/view/passenger_screens/profile_screens/my_profile.dart';
-
+import 'package:liveproject/import_all.dart';
 
 class EnterLocation extends StatefulWidget {
   const EnterLocation({Key? key}) : super(key: key);

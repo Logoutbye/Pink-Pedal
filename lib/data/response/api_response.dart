@@ -1,5 +1,5 @@
 
-import 'package:liveproject/data/response/status.dart';
+import 'package:liveproject/import_all.dart';
 
 class ApiResponse<T> {
 

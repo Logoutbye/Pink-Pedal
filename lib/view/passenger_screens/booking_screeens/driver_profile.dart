@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/constant/assetpath.dart';
+import 'package:liveproject/import_all.dart';
 
 class DriverProfile extends StatefulWidget {
   const DriverProfile({Key? key}) : super(key: key);

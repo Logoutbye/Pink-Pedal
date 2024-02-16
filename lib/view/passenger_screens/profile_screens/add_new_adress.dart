@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/components/elevatedbutton.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
-import 'package:liveproject/utilis/constant/icons.dart';
+import 'package:liveproject/import_all.dart';
+
 class NewAddress extends StatefulWidget {
   const NewAddress({super.key});
 
@@ -11,24 +8,32 @@ class NewAddress extends StatefulWidget {
 }
 
 class _NewAddressState extends State<NewAddress> {
-   final TextEditingController _nameController = TextEditingController();
-   String? chooseCountryValue ;
-   List<String > countryList=['Pakistan','India','Nepal','Bagladash'];
-   String? chooseCityValue;
-   List<String> cityList=['Abbotabad','Islamabad','lahore','karachi','koita'];
-   String? choosestate;
-   List<String> StateList=['Male','Female'];
-   String? chooseZipCode;
-   List<String> ZipcodeList=['1234','987654'];
+  final TextEditingController _nameController = TextEditingController();
+  String? chooseCountryValue;
+  List<String> countryList = ['Pakistan', 'India', 'Nepal', 'Bagladash'];
+  String? chooseCityValue;
+  List<String> cityList = [
+    'Abbotabad',
+    'Islamabad',
+    'lahore',
+    'karachi',
+    'koita'
+  ];
+  String? choosestate;
+  List<String> StateList = ['Male', 'Female'];
+  String? chooseZipCode;
+  List<String> ZipcodeList = ['1234', '987654'];
   @override
   Widget build(BuildContext context) {
-    var height=MediaQuery.of(context).size.height;
-     var width=MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: CommonIcons.arrowback,
-        title: Text('Add New Address',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold,fontSize: 16)),
+        title: Text('Add New Address',
+            style: Themetext.atextstyle
+                .copyWith(fontWeight: FontWeight.bold, fontSize: 16)),
         centerTitle: true,
       ),
       body: Padding(
@@ -36,193 +41,194 @@ class _NewAddressState extends State<NewAddress> {
         child: SingleChildScrollView(
           child: Column(
             //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Full Name', style: Themetext.btextstyle.copyWith(
-                fontWeight: FontWeight.bold
-              )),
-                  SizedBox(height: height * 0.01),
-                  Container(
-                    height: height*0.07,
-                    padding: const EdgeInsets.only(left: 8),
-                    decoration: BoxDecoration(
-                      color: Themecolor.textfield,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: TextField(
-                      controller: _nameController,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                       hintText: 'enter your Full Name',
-                        hintStyle: Themetext.btextstyle,
-                      ),
-                    ),
+              Text('Full Name',
+                  style: Themetext.btextstyle
+                      .copyWith(fontWeight: FontWeight.bold)),
+              SizedBox(height: height * 0.01),
+              Container(
+                height: height * 0.07,
+                padding: const EdgeInsets.only(left: 8),
+                decoration: BoxDecoration(
+                  color: Themecolor.textfield,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: TextField(
+                  controller: _nameController,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'enter your Full Name',
+                    hintStyle: Themetext.btextstyle,
                   ),
-                     SizedBox(height: height * 0.01),
-          
-                // Date of Birth
-                Text('Country', style: Themetext.btextstyle.copyWith(
-                fontWeight: FontWeight.bold
-              )),
-                SizedBox(height: height * 0.01),
-                Container(
-                      height: height*0.07,
-                    padding: const EdgeInsets.only(left: 8),
-                    decoration: BoxDecoration(
-                      color: Themecolor.textfield,
-                      borderRadius: BorderRadius.circular(15),
+                ),
+              ),
+              SizedBox(height: height * 0.01),
+
+              // Date of Birth
+              Text('Country',
+                  style: Themetext.btextstyle
+                      .copyWith(fontWeight: FontWeight.bold)),
+              SizedBox(height: height * 0.01),
+              Container(
+                height: height * 0.07,
+                padding: const EdgeInsets.only(left: 8),
+                decoration: BoxDecoration(
+                  color: Themecolor.textfield,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: DropdownButton(
+                    hint: Text(
+                      'Select Country',
+                      style: Themetext.btextstyle,
                     ),
-                  child: DropdownButton(
-                    hint: Text('Select Country',style: Themetext.btextstyle,),
-                      underline: Container(),
+                    underline: Container(),
                     isExpanded: true,
                     iconSize: 35,
                     style: Themetext.btextstyle,
-                  
-                  
                     value: chooseCountryValue,
-                    items: countryList.map((valueitem){
+                    items: countryList.map((valueitem) {
                       return DropdownMenuItem(
                         value: valueitem,
-                        child: Text(valueitem),);
-                    }).toList(), 
-                    onChanged: (newvalue){
+                        child: Text(valueitem),
+                      );
+                    }).toList(),
+                    onChanged: (newvalue) {
                       setState(() {
-                        chooseCountryValue=newvalue;
+                        chooseCountryValue = newvalue;
                       });
-                  
-                  
                     }),
+              ),
+              SizedBox(height: height * 0.01),
+
+              // Date of Birth
+              Text('City',
+                  style: Themetext.btextstyle
+                      .copyWith(fontWeight: FontWeight.bold)),
+              SizedBox(height: height * 0.01),
+              Container(
+                height: height * 0.07,
+                padding: const EdgeInsets.only(left: 8),
+                decoration: BoxDecoration(
+                  color: Themecolor.textfield,
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                SizedBox(height: height * 0.01),
-          
-                // Date of Birth
-                Text('City', style: Themetext.btextstyle.copyWith(
-                fontWeight: FontWeight.bold
-              )),
-                SizedBox(height: height * 0.01),
-                Container(
-                    height: height*0.07,
-                    padding: const EdgeInsets.only(left: 8),
-                    decoration: BoxDecoration(
-                      color: Themecolor.textfield,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  child: DropdownButton(
+                child: DropdownButton(
                     value: chooseCityValue,
                     isExpanded: true,
                     underline: Container(),
                     iconSize: 35,
-                    hint: Text('Select City',style: Themetext.btextstyle),
+                    hint: Text('Select City', style: Themetext.btextstyle),
                     style: Themetext.btextstyle,
-                    items: cityList.map((valueitem){
+                    items: cityList.map((valueitem) {
                       return DropdownMenuItem(
-                        value: valueitem,
-                        child: Text(valueitem));
+                          value: valueitem, child: Text(valueitem));
                     }).toList(),
-                     onChanged: (newCityValue){
+                    onChanged: (newCityValue) {
                       setState(() {
-                        chooseCityValue=newCityValue;
+                        chooseCityValue = newCityValue;
                       });
-                  
-                     }),
+                    }),
+              ),
+              SizedBox(height: height * 0.01),
+
+              // Date of Birth
+              Text('State',
+                  style: Themetext.btextstyle
+                      .copyWith(fontWeight: FontWeight.bold)),
+              SizedBox(height: height * 0.01),
+              Container(
+                height: height * 0.07,
+                padding: const EdgeInsets.only(left: 8),
+                decoration: BoxDecoration(
+                  color: Themecolor.textfield,
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                 SizedBox(height: height * 0.01),
-          
-                // Date of Birth
-                Text('State', style: Themetext.btextstyle.copyWith(
-                fontWeight: FontWeight.bold
-              )),
-                SizedBox(height: height * 0.01),
-                Container(
-                  height: height*0.07,
-                    padding: const EdgeInsets.only(left: 8),
-                    decoration: BoxDecoration(
-                      color: Themecolor.textfield,
-                      borderRadius: BorderRadius.circular(15),
+                child: DropdownButton(
+                    value: choosestate,
+                    hint: Text(
+                      'Select State',
+                      style: Themetext.btextstyle,
                     ),
-                  child: DropdownButton(
-                      value: choosestate,
-                    hint: Text('Select State',style: Themetext.btextstyle,),
-                         style: Themetext.btextstyle,
+                    style: Themetext.btextstyle,
                     isExpanded: true,
                     underline: Container(),
                     iconSize: 35,
-                    items: StateList.map((valueitem){
+                    items: StateList.map((valueitem) {
                       return DropdownMenuItem(
-                        
-                        value: valueitem,
-                        child: Text(valueitem) );
-                    }).toList(), 
-                    onChanged: (newStatevalue){
+                          value: valueitem, child: Text(valueitem));
+                    }).toList(),
+                    onChanged: (newStatevalue) {
                       setState(() {
-                        choosestate=newStatevalue;
+                        choosestate = newStatevalue;
                       });
-                  
                     }),
+              ),
+              SizedBox(height: height * 0.01),
+
+              // Date of Birth
+              Text('Zip Code',
+                  style: Themetext.btextstyle
+                      .copyWith(fontWeight: FontWeight.bold)),
+              SizedBox(height: height * 0.01),
+              Container(
+                height: height * 0.07,
+                padding: const EdgeInsets.only(left: 8),
+                decoration: BoxDecoration(
+                  color: Themecolor.textfield,
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                   SizedBox(height: height * 0.01),
-          
-                // Date of Birth
-                Text('Zip Code', style: Themetext.btextstyle.copyWith(
-                fontWeight: FontWeight.bold
-              )),
-                SizedBox(height: height * 0.01),
-                Container(
-                  height: height*0.07,
-                    padding: const EdgeInsets.only(left: 8),
-                    decoration: BoxDecoration(
-                      color: Themecolor.textfield,
-                      borderRadius: BorderRadius.circular(15),
+                child: DropdownButton(
+                    hint: Text(
+                      'Enter a Zip code',
+                      style: Themetext.btextstyle,
                     ),
-                  child: DropdownButton(
-                    hint: Text('Enter a Zip code',style: Themetext.btextstyle,),
-                         style: Themetext.btextstyle,
+                    style: Themetext.btextstyle,
                     isExpanded: true,
                     underline: Container(),
                     iconSize: 35,
                     value: chooseZipCode,
-                    items: ZipcodeList.map((itemList){
+                    items: ZipcodeList.map((itemList) {
                       return DropdownMenuItem(
-                        value: itemList,
-                        child: Text(itemList));
-                  
+                          value: itemList, child: Text(itemList));
                     }).toList(),
-                     onChanged: (value){
-                      chooseZipCode=value;
-                  
-                     }),
-                ),
-                   SizedBox(height: height * 0.01),
-          
-                // Date of Birth
-                Text('Detail Address',style: Themetext.btextstyle.copyWith(
-                fontWeight: FontWeight.bold
-              )),
-                SizedBox(height: height * 0.01),
-                Container(
-                   height: height*0.2,
-                    padding: const EdgeInsets.only(left: 8),
-                    decoration: const BoxDecoration(
-                      color: Themecolor.textfield,
-                      borderRadius: BorderRadius.only(topRight: Radius.circular(15),topLeft: Radius.circular(15))
-                    ),
-                  child: TextField(
-                    style: Themetext.btextstyle,
-                    
-                    decoration: InputDecoration(
+                    onChanged: (value) {
+                      chooseZipCode = value;
+                    }),
+              ),
+              SizedBox(height: height * 0.01),
+
+              // Date of Birth
+              Text('Detail Address',
+                  style: Themetext.btextstyle
+                      .copyWith(fontWeight: FontWeight.bold)),
+              SizedBox(height: height * 0.01),
+              Container(
+                height: height * 0.2,
+                padding: const EdgeInsets.only(left: 8),
+                decoration: const BoxDecoration(
+                    color: Themecolor.textfield,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(15),
+                        topLeft: Radius.circular(15))),
+                child: TextField(
+                  style: Themetext.btextstyle,
+                  decoration: InputDecoration(
                       border: InputBorder.none,
-                      label: Text('Enter Your Address',style: Themetext.btextstyle,)),
-                  ),
+                      label: Text(
+                        'Enter Your Address',
+                        style: Themetext.btextstyle,
+                      )),
                 ),
-                 SizedBox(height: height * 0.02),
-                 Center(
-                   child: CustomElevatedButton(
+              ),
+              SizedBox(height: height * 0.02),
+              Center(
+                child: CustomElevatedButton(
                     textColor: const Color(0xFF9CA4AB),
                     color: Themecolor.textfield,
-                    text: 'Save Address', onPressed: (){}),
-                 )
-          
+                    text: 'Save Address',
+                    onPressed: () {}),
+              )
             ],
           ),
         ),

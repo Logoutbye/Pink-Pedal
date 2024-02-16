@@ -1,6 +1,5 @@
 import 'dart:ui';
-
-import 'package:flutter/material.dart';
+import 'package:liveproject/import_all.dart';
 
 class SucesssScreen extends StatefulWidget {
   const SucesssScreen({Key? key}) : super(key: key);

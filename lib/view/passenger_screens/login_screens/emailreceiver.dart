@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/routes_name.dart';
-import 'package:liveproject/utilis/components/elevatedbutton.dart';
+import 'package:liveproject/import_all.dart';
 
 
 class Email_recieve extends StatefulWidget {

@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/Routes/routes_name.dart';
-import 'package:liveproject/utilis/components/elevatedbutton.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
-import 'package:liveproject/utilis/constant/assetpath.dart';
+import 'package:liveproject/import_all.dart';
 
 class MyProfile extends StatefulWidget {
   const MyProfile({Key? key}) : super(key: key);

@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
-import 'package:liveproject/utilis/constant/icons.dart';
+import 'package:liveproject/import_all.dart';
 
 class LegalAndPolicies extends StatefulWidget {
   const LegalAndPolicies({super.key});

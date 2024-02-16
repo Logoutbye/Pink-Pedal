@@ -1,10 +1,5 @@
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:liveproject/utilis/Routes/routes_name.dart';
-import 'package:liveproject/utilis/components/elevatedbutton.dart';
-import 'package:liveproject/utilis/theme/theme_text.dart';
 
+import 'package:liveproject/import_all.dart';
 
 class Otpscreen extends StatefulWidget {
 
