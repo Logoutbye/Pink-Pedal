@@ -1,11 +1,12 @@
 import 'package:liveproject/import_all.dart';
 
+
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RoutesName.userSplash:
-        return SlideTransitionPage(page: const LogoPage());
-      // return SlideTransitionPage(page:const LogoPage());
+        return SlideTransitionPage(page: const SplashScreen());
+        
       case RoutesName.onBoarding:
         return SlideTransitionPage(page: const FirstOnboardingScreen());
       case RoutesName.signUpUser:
@@ -13,7 +14,7 @@ class Routes {
       case RoutesName.signInUser:
         return SlideTransitionPage(page: const SigninScreen());
       case RoutesName.otpCode:
-        return SlideTransitionPage(page: const Otpscreen());
+        return SlideTransitionPage(page: const Otpscreen(isCreateAccount: true,));
       case RoutesName.otpEmailNum:
         return SlideTransitionPage(page: const OTPEmailNum());
       case RoutesName.forGotPassword:

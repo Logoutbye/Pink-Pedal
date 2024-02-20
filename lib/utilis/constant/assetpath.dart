@@ -7,4 +7,7 @@ class AssetPaths {
   static const String onBoarding2 = 'assets/images/onboarding22.png';
   static const String onBoarding3 = 'assets/images/onboarding33.png';
   static const String onBoarding11 = 'assets/images/onboarding11.jpg';
+
+  // new Splash screen Path must delete other old paths and there assests
+  static const String splashPath = 'assets/svg/splash.svg';
 }

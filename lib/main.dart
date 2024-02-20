@@ -1,8 +1,11 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liveproject/import_all.dart';
 
 
+
+
 void main() {
-  runApp(const Home());
+  runApp(const ProviderScope(child: Home()));
 }
 
 class Home extends StatelessWidget {
@@ -15,7 +18,7 @@ class Home extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: RoutesName.userSplash,
       onGenerateRoute: Routes.generateRoute,
-      // home: TodayAppurtunitie,
+      // home: PassengersRequests(),
     );
   }
 }

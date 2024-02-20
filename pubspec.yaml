@@ -31,12 +31,15 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  provider: ^6.1.1
+  # provider: ^6.1.1
   smooth_page_indicator: ^1.1.0
   intl: ^0.19.0
   flutter_rating_bar: ^4.0.1
   http: ^1.2.0
   flutter_riverpod: ^2.4.10
+  flutter_svg: ^2.0.7
+  fluttertoast: ^8.0.9
+  another_flushbar: ^1.10.29
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -62,6 +65,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/svg/
     #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
