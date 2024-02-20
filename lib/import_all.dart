@@ -60,3 +60,4 @@ export 'package:flutter/foundation.dart';
 export 'package:liveproject/model/user_model.dart';
 export 'package:liveproject/respository/auth_repository.dart';
 export  'package:liveproject/utilis/components/utils.dart';
+export 'package:fl_chart/fl_chart.dart';

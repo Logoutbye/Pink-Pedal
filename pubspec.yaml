@@ -40,6 +40,7 @@ dependencies:
   flutter_svg: ^2.0.7
   fluttertoast: ^8.0.9
   another_flushbar: ^1.10.29
+  fl_chart: ^0.66.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
