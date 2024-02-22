@@ -22,7 +22,7 @@ class FetchDataException extends AppException {
 
 class BadRequestException extends AppException {
 
-  BadRequestException([String? message]) : super(message, 'Invalid request');
+  BadRequestException([String? message]) : super(message, '');
 }
 
 

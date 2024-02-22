@@ -34,6 +34,7 @@ class Themetext {
   );
   static TextStyle atextstyle = const TextStyle(
     fontFamily: 'poppins',
+    
     fontSize: mediumeSize,
     fontWeight: FontWeight.w600,
     color: Color(0xFF000000),

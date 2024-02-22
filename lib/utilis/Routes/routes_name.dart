@@ -2,11 +2,11 @@ class RoutesName {
   static const String userSplash = 'logopage';
   static const String onBoarding = 'firstscreen';
   //this is roures of login screens
-  static const String signUpUser = 'signup';
-  static const String signInUser = 'signinscreens';
-  static const String forGotPassword = 'forgotpassword';
-  static const String otpCode = 'otp';
-  static const String otpEmailNum='otpcode_email_num';
+  static const String signUpforPassenger = 'signUpforPassenger';
+  static const String signInScreen = 'signInScreen';
+  static const String forgotPassword = 'forgot_password';
+  static const String otpScreen = 'otpScreen';
+  static const String forgetPasswordWithOptions='forgetPasswordWithOptions';
   static const String emailRecieve = 'emailreceive';
   static const String createNewPassword = 'createnewpassword';
   //this is a routes name of profile screens
@@ -38,5 +38,5 @@ class RoutesName {
   static const String messageDetail = 'message_detail';
   static const String allMessagesShown = 'allMessages';
   // this is a routes of name of deriver sides
-  static const String  deriverUser='SplashScreen';
+  static const String  selectRoleScreen='selectRoleScreen';
 }

@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2),
-        () => Navigator.pushNamed(context, RoutesName.signInUser));
+        () => Navigator.pushReplacementNamed(context, RoutesName.selectRoleScreen));
   }
 
   @override

@@ -6,7 +6,7 @@ class HomeRepository {
   Future<MovieListModel> fetchMoviesList() async {
     try {
       dynamic response =
-          await apiServices.getGetApiResponse(AppUrl.baseUrl);
+          await apiServices.fetchGetApiResponse(AppUrl.baseUrl);
       return response = MovieListModel.fromJson(response);
     } catch (e) {
       throw e;

@@ -1,26 +1,45 @@
 import 'package:liveproject/import_all.dart';
 
-
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RoutesName.userSplash:
         return SlideTransitionPage(page: const SplashScreen());
-        
+
       case RoutesName.onBoarding:
         return SlideTransitionPage(page: const FirstOnboardingScreen());
-      case RoutesName.signUpUser:
-        return SlideTransitionPage(page: const SignUp());
-      case RoutesName.signInUser:
-        return SlideTransitionPage(page: const SigninScreen());
-      case RoutesName.otpCode:
-        return SlideTransitionPage(page: const Otpscreen(isCreateAccount: true,));
-      case RoutesName.otpEmailNum:
-        return SlideTransitionPage(page: const OTPEmailNum());
-      case RoutesName.forGotPassword:
-        return SlideTransitionPage(page: const ForgotPassword());
+      case RoutesName.signUpforPassenger:
+        return SlideTransitionPage(page: const SignUpForPassenger());
+      case RoutesName.signInScreen:
+        return SlideTransitionPage(page: SigninScreen());
+      case RoutesName.otpScreen:
+        final OtpDetilasArgument args =
+            settings.arguments as OtpDetilasArgument;
+
+        return SlideTransitionPage(
+            page: OtpScreen(
+          isCommingFromRegistrationScreen: args.isCommingFromRegistrationScreen,
+          phoneNumber: args.phoneNo,
+          verifyWithEmail: args.verifyWithEmail,
+        ));
+      case RoutesName.forgetPasswordWithOptions:
+        return SlideTransitionPage(page: const ForgetPasswordWithOptions());
+      case RoutesName.forgotPassword:
+        final ForgetPasswordArguments args =
+            settings.arguments as ForgetPasswordArguments;
+        return SlideTransitionPage(
+            page: ForgotPassword(
+          withEmailOrPhoneNo: args.withEmailOrPhoneNo,
+        ));
       case RoutesName.createNewPassword:
-        return SlideTransitionPage(page: const CreateNewPassword());
+        final CreateNewPasswordArugments args =
+            settings.arguments as CreateNewPasswordArugments;
+        return SlideTransitionPage(
+            page: CreateNewPassword(
+          token: args.token,
+          phoneOrEmail: args.phoneOrEmail,
+          verifyWithEmail: args.verifyWithEmail,
+        ));
       case RoutesName.addDestination:
         return SlideTransitionPage(page: const AddDestination());
       case RoutesName.enterLocation:
@@ -58,8 +77,8 @@ class Routes {
       case RoutesName.helpAndSupport:
         return SlideTransitionPage(page: const HelpAndSupport());
 //deriverisides
-      case RoutesName.deriverUser:
-        return SlideTransitionPage(page: const splashScreenDeriver());
+      case RoutesName.selectRoleScreen:
+        return SlideTransitionPage(page: const SelectRoleScreen());
       default:
         // Handle undefined routes
         throw Exception('Invalid route: ${settings.name}');
@@ -103,3 +122,7 @@ class Routes {
 //     name: "John Doe",
 //   ),
 // );
+
+class GetRole {
+  static String? role;
+}

@@ -1,49 +1,45 @@
 // To parse this JSON data, do
 //
-//     final user = userFromJson(jsonString);
+//     final userRegistration = userRegistrationFromJson(jsonString);
 
 import 'dart:convert';
 
-UserLogin userFromJson(String str) => UserLogin.fromJson(json.decode(str));
+UserRegistration userRegistrationFromJson(String str) => UserRegistration.fromJson(json.decode(str));
 
-String userToJson(UserLogin data) => json.encode(data.toJson());
+String userRegistrationToJson(UserRegistration data) => json.encode(data.toJson());
 
-class UserLogin {
-    String message;
-    UserClass user;
-    String token;
-    bool status;
+class UserRegistration {
+    var message;
+    User user;
+    var status;
 
-    UserLogin({
+    UserRegistration({
         required this.message,
         required this.user,
-        required this.token,
         required this.status,
     });
 
-    factory UserLogin.fromJson(Map<String, dynamic> json) => UserLogin(
+    factory UserRegistration.fromJson(Map<String, dynamic> json) => UserRegistration(
         message: json["message"],
-        user: UserClass.fromJson(json["user"]),
-        token: json["token"],
-        status: json["status"],
+        user: User.fromJson(json["user"]),
+        status: json["success"],
     );
 
     Map<String, dynamic> toJson() => {
         "message": message,
         "user": user.toJson(),
-        "token": token,
-        "status": status,
+        "success": status,
     };
 }
 
-class UserClass {
-    String id;
-    String username;
-    String email;
-    String phoneNumber;
-    String profileImage;
+class User {
+    dynamic id;
+    dynamic username;
+    dynamic email;
+    dynamic phoneNumber;
+    dynamic profileImage;
 
-    UserClass({
+    User({
         required this.id,
         required this.username,
         required this.email,
@@ -51,7 +47,7 @@ class UserClass {
         required this.profileImage,
     });
 
-    factory UserClass.fromJson(Map<String, dynamic> json) => UserClass(
+    factory User.fromJson(Map<String, dynamic> json) => User(
         id: json["_id"],
         username: json["username"],
         email: json["email"],
@@ -67,5 +63,3 @@ class UserClass {
         "profileImage": profileImage,
     };
 }
-
-

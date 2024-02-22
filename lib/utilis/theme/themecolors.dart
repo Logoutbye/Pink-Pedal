@@ -4,6 +4,7 @@ class  Themecolor{
   Themecolor._();
 
 static const Color elvatedButton=Color(0xFF03008B);
+static const Color flushbar = Color.fromARGB(255, 138, 136, 220);
 static const Color appBar=Color(0xFF03008B);
 static const Color container=Color(0xFF03008B);
 static const Color container2=Color(0xFFFFFFFF);

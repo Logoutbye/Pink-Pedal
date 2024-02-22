@@ -1,10 +1,9 @@
-
 import 'package:liveproject/import_all.dart';
 import 'package:http/http.dart' as http;
 
 class NetworkApiService extends BaseApiServices {
   @override
-  Future getGetApiResponse(String url) async {
+  Future fetchGetApiResponse(String url) async {
     dynamic responseJson;
     try {
       final response =
@@ -18,12 +17,13 @@ class NetworkApiService extends BaseApiServices {
   }
 
   @override
-  Future getPostApiResponse(String url, dynamic data) async {
+  Future fetchPostApiResponse(String url, dynamic data) async {
     dynamic responseJson;
     try {
-      Response response = await post(Uri.parse(url), body: data)
-          .timeout(const Duration(seconds: 10));
-
+      final headers = {'Content-Type': 'application/json'};
+      Response response =
+          await post(Uri.parse(url), headers: headers, body: jsonEncode(data))
+              .timeout(const Duration(seconds: 10));
       responseJson = returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet Connection');
@@ -33,15 +33,24 @@ class NetworkApiService extends BaseApiServices {
   }
 
   dynamic returnResponse(http.Response response) {
+    // print(response.body);
     switch (response.statusCode) {
       case 200:
         dynamic responseJson = jsonDecode(response.body);
         return responseJson;
+      case 201:
+        dynamic responseJson = jsonDecode(response.body);
+        return responseJson;
       case 400:
-        throw BadRequestException(response.body.toString());
+        // throw BadRequestException(response.body.toString());
+        dynamic responseJson = jsonDecode(response.body);
+        final errorMessage = responseJson['message'] ?? 'Bad Request';
+        throw BadRequestException(errorMessage);
       case 500:
       case 404:
-        throw UnauthorisedException(response.body.toString());
+        dynamic responseJson = jsonDecode(response.body);
+        final errorMessage = responseJson['message'] ?? 'Bad Request';
+        throw UnauthorisedException(errorMessage);
       default:
         throw FetchDataException(
             'Error accured while communicating with serverwith status code${response.statusCode}');

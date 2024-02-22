@@ -52,7 +52,7 @@ class _EmailRecieverState extends State<EmailReciever> {
           ),
           SizedBox(height: height * 0.02),
           InkWell(
-            onTap: ()=>Navigator.pushNamed(context, RoutesName.forGotPassword),
+            onTap: ()=>Navigator.pushNamed(context, RoutesName.forgotPassword),
             child: Text(
               'Skip, I’ll confirm later',
               style: Theme.of(context).textTheme.bodySmall,

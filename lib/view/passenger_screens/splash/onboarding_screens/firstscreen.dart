@@ -30,7 +30,7 @@ class _FirstOnboardingScreenState extends State<FirstOnboardingScreen> {
         onPageChanged: (int page) {
           if (page == 2) { // Assuming last screen is at index 2
             // Navigate to desired screen
-           Navigator.pushNamed(context, RoutesName.deriverUser);
+           Navigator.pushNamed(context, RoutesName.selectRoleScreen);
           }
         },
         children: const [

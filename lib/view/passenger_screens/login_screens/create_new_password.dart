@@ -1,22 +1,32 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liveproject/import_all.dart';
+import 'package:liveproject/view_model/create_new_password_view_model.dart';
 
-
-class CreateNewPassword extends StatefulWidget {
-  const CreateNewPassword({super.key});
+class CreateNewPassword extends ConsumerStatefulWidget {
+  final String token;
+  final String phoneOrEmail;
+  final bool verifyWithEmail;
+  const CreateNewPassword({
+    Key? key,
+    required this.token,
+    required this.phoneOrEmail,
+    required this.verifyWithEmail,
+  }) : super(key: key);
 
   @override
-  State<CreateNewPassword> createState() => _CreateNewPasswordState();
+  ConsumerState<CreateNewPassword> createState() => _CreateNewPasswordState();
 }
 
-class _CreateNewPasswordState extends State<CreateNewPassword> {
-  TextEditingController newpasswordcontroller=TextEditingController();
-    TextEditingController confirmpasswordcontroller=TextEditingController();
+class _CreateNewPasswordState extends ConsumerState<CreateNewPassword> {
+  TextEditingController newpasswordcontroller = TextEditingController();
+  TextEditingController confirmpasswordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    var height=MediaQuery.of(context).size.height;
-    var width=MediaQuery.of(context).size.width;
+    final createViewModel = ref.watch(createNewPasswordViewModelProvider);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFFEFEFE),
@@ -53,8 +63,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   labelStyle: Theme.of(context).textTheme.bodySmall,
                   hintText: 'Enter  a New Password',
                   hintStyle: Theme.of(context).textTheme.bodyMedium,
-                   contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
-                  border:const OutlineInputBorder(
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(
                         10)), // Use Radius.circular to specify the border radius
                   ),
@@ -72,7 +83,8 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   labelStyle: Theme.of(context).textTheme.bodySmall,
                   hintText: 'Confirm Your Password',
                   hintStyle: Theme.of(context).textTheme.bodyMedium,
-                   contentPadding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8), 
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                   border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(
                         10)), // Use Radius.circular to specify the border radius
@@ -82,66 +94,42 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              CustomElevatedButton(
-                text: 'Next', 
-                onPressed: (){
-        opendialog();
-                })
+              Center(
+                child: createViewModel.status == Status.LOADING
+                    ? CircularProgressIndicator()
+                    : CustomElevatedButton(
+                        text: 'Next',
+                        onPressed: () {
+                          if (newpasswordcontroller.text ==
+                              confirmpasswordcontroller.text) {
+                            // opendialog();
+                            ref
+                                .read(
+                                    createNewPasswordViewModelProvider.notifier)
+                                .createNewPasswordApi(
+                                    widget.phoneOrEmail,
+                                    newpasswordcontroller.text,
+                                    widget.token,
+                                    context);
+                          } else {
+                            Utils.snackBar('Passwords doesnot match', context);
+                          }
+                        }),
+              ),
             ],
           ),
         ),
       ),
     );
   }
- void  opendialog(){
-    showDialog(
-      context: context,
-       builder: (context){
-return AlertDialog(
-     title: Column(
-       mainAxisAlignment: MainAxisAlignment.center,
-       crossAxisAlignment: CrossAxisAlignment.center,
-       children: [
-         Image.asset(
-           'assets/images/illusterate.png',
-           width: MediaQuery.of(context).size.width * 0.5,
-           height: MediaQuery.of(context).size.height *0.2,
-         ),
-       
-         Text(
-           'Success',
-           style: Theme.of(context).textTheme.bodySmall,
-         ),
-         const SizedBox(
-           height: 15,
-         ),
-         const Wrap(
-           children: [
-             Text(
-               'Your password is successfully created',
-               textAlign: TextAlign.center,
-             ),
-           ],
-         ),
-         const SizedBox(
-           height: 15,
-         ),
-         Padding(
-           padding: const EdgeInsets.only(left: 30, right: 30),
-           child: ElevatedButton(
-             onPressed: () {
-              Navigator.pushNamed(context, RoutesName.signInUser);
-             },
-             child: const Text(
-               'Continue',
-               style: TextStyle(color: Colors.white),
-             ),
-           ),
-         ),
-       ],
-     ),
+}
 
-);
-       });
-  }
+class CreateNewPasswordArugments {
+  final String token;
+  final String phoneOrEmail;
+  final bool verifyWithEmail;
+  CreateNewPasswordArugments(
+      {required this.token,
+      required this.phoneOrEmail,
+      required this.verifyWithEmail});
 }
