@@ -49,7 +49,11 @@ class _PassengersRequestsState extends State<PassengersRequests> {
         children: [
           Container(
             color: Themecolor.container,
-            height: height * 0.45,
+            width: double.infinity,
+            height: height * 0.35,
+            child: Center(
+              child: Image.asset(AssetPaths.splashimage,fit: BoxFit.cover,),
+            ),
           ),
           Expanded(
             child: ListView.builder(
