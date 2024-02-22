@@ -28,6 +28,7 @@ class RoutesName {
   static const String deriverProfile = 'deriver_profile';
   static const String deriverDetails = 'currentDeriverDetail';
   static const String bookingSelectFromTo = 'bookingSelect';
+   static const String TripDetails = 'trip_detail';
   //this is routes name of paycard screens
   static const String debitCard = 'Debit_card';
   static const String payNow = 'pay_now';

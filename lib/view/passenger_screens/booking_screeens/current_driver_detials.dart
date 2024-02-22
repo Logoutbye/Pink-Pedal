@@ -29,26 +29,28 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: Icon(Icons.arrow_back_ios,color: Themecolor.container2,),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(Icons.view_day_rounded,color: Themecolor.container2,size: 30,),
+          ),
+        ],
+      ),
       body: Stack(
+        
         children: [
           Container(
+            color: Themecolor.container,
             height: height * 0.36,
-            width: width,
-            color: Colors.teal,
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: CustomSearchBar(),
-                ),
-              ],
-            ),
+            width: double.infinity,
+            child: Center(child: Image.asset(AssetPaths.splashimage,)),
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: height * 0.64,
+              height: height * 0.6,
               width: width,
               decoration: const BoxDecoration(
                   color: Colors.white,
@@ -62,7 +64,7 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                   children: [
                     Text(
                       'Driver details',
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.bold)
                     ),
                     Row(
                       children: [
@@ -73,11 +75,11 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                               backgroundImage:
                                  const AssetImage(AssetPaths.image),
                             ),
-                            title: Text(deriverName),
+                            title: Text(deriverName,style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold),),
                             subtitle: Row(
                               children: [
                                 const Icon(Icons.call),
-                                const SizedBox(width: 5),
+                                 SizedBox(width: width*0.001),
                                 Text(phonNo),
                               ],
                             ),
@@ -94,7 +96,7 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: const Icon(Icons.message_outlined,
-                              size: 30, color: Themecolor.container),
+                              size: 35, color: Themecolor.container),
                         ),
                         SizedBox(
                           width: width*0.04,
@@ -110,7 +112,7 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                           ),
                           child: const Icon(
                             Icons.add_call,
-                            size: 30,
+                            size: 35,
                             color: Themecolor.container,
                           ),
                         )
@@ -118,7 +120,7 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                       ],
                     ),
                     SizedBox(
-                      height: height * 0.01,
+                      height: height * 0.003,
                     ),
                     const Divider(
                       color: Color(0xFFEBEBEB),
@@ -185,8 +187,8 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                         )
                       ],
                     ),
-                    SizedBox(
-                      height: height * 0.01,
+                     SizedBox(
+                      height: height * 0.003,
                     ),
                     const Divider(
                       color: Color(0xFFEBEBEB),
@@ -252,7 +254,7 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                       ],
                     ),
                     SizedBox(
-                      height: height * 0.03,
+                      height: height * 0.02,
                     ),
                     Center(
                         child: Text(
@@ -261,7 +263,7 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
                           fontWeight: FontWeight.w900, fontSize: 17),
                     )),
                     SizedBox(
-                      height: height * 0.03,
+                      height: height * 0.01,
                     ),
                     CustomElevatedButton(text: 'Cancel', onPressed: () {})
                   ],
