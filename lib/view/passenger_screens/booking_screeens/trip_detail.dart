@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:liveproject/import_all.dart';
 
 class TripDetail extends StatefulWidget {
@@ -21,10 +20,10 @@ class _TripDetailState extends State<TripDetail> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Themecolor.container2,
-        leading: Icon(Icons.arrow_back_ios_new,size: 25,),
-        actions: [
+        leading: const Icon(Icons.arrow_back_ios_new,size: 25,),
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Icon(Icons.view_headline,size: 30,),
           )
         ],
@@ -35,7 +34,7 @@ class _TripDetailState extends State<TripDetail> {
             color: Themecolor.Divider,
             child: Column(
               children: [
-                Container(
+                SizedBox(
                   width: double.infinity,
                   height: height * 0.23,
                   child: Image.asset(AssetPaths.riderdetail,
@@ -47,8 +46,8 @@ class _TripDetailState extends State<TripDetail> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(15),
+                      margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.09,
                 decoration: BoxDecoration(
@@ -59,7 +58,7 @@ class _TripDetailState extends State<TripDetail> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -83,8 +82,8 @@ class _TripDetailState extends State<TripDetail> {
                     // SizedBox(height: height*0.01),
                     // Divider(color: Color(0xFFF1EDED)),
                     Container(
-                           margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(15),
+                           margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.1,
                 decoration: BoxDecoration(
@@ -95,7 +94,7 @@ class _TripDetailState extends State<TripDetail> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -106,7 +105,7 @@ class _TripDetailState extends State<TripDetail> {
                     Text('From',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold),),
                     SizedBox(height: height*0.01,),
                     Row(children: [
-                      Icon(Icons.location_searching_outlined,color:  Themecolor.container,),
+                      const Icon(Icons.location_searching_outlined,color:  Themecolor.container,),
                       SizedBox(width: width*0.01,),
                       Text(fromLocation, style: Themetext.atextstyle,)
                     ],),
@@ -116,8 +115,8 @@ class _TripDetailState extends State<TripDetail> {
                     ),
                    SizedBox(height: height*0.0001,),
                        Container(
-                           margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(15),
+                           margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.1,
                 decoration: BoxDecoration(
@@ -128,7 +127,7 @@ class _TripDetailState extends State<TripDetail> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -139,7 +138,7 @@ class _TripDetailState extends State<TripDetail> {
                     Text('Destination',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold),),
                     SizedBox(height: height*0.01,),
                     Row(children: [
-                      Icon(Icons.location_on_outlined,color: Themecolor.container,),
+                      const Icon(Icons.location_on_outlined,color: Themecolor.container,),
                       SizedBox(width: width*0.01,),
                       Text(destination, style: Themetext.atextstyle,)
                     ],),
@@ -149,8 +148,8 @@ class _TripDetailState extends State<TripDetail> {
                     ),
                SizedBox(height: height*0.0001,),
                        Container(
-                           margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(15),
+                           margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.1,
                 decoration: BoxDecoration(
@@ -161,7 +160,7 @@ class _TripDetailState extends State<TripDetail> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -172,7 +171,7 @@ class _TripDetailState extends State<TripDetail> {
                     Text('K/M',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold),),
                     SizedBox(height: height*0.01,),
                     Row(children: [
-                      Icon(Icons.mode_of_travel_outlined,color: Themecolor.container,),
+                      const Icon(Icons.mode_of_travel_outlined,color: Themecolor.container,),
                       SizedBox(width: width*0.01,),
                       Text(distance, style: Themetext.atextstyle,)
                     ],),
@@ -182,8 +181,8 @@ class _TripDetailState extends State<TripDetail> {
                     ),
                      SizedBox(height: height*0.0001,),
                        Container(
-                           margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(15),
+                           margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.1,
                 decoration: BoxDecoration(
@@ -194,7 +193,7 @@ class _TripDetailState extends State<TripDetail> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -205,7 +204,7 @@ class _TripDetailState extends State<TripDetail> {
                     Text('Vehicle',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold),),
                     SizedBox(height: height*0.01,),
                     Row(children: [
-                      Icon(Icons.car_crash_outlined,color: Themecolor.container,),
+                      const Icon(Icons.car_crash_outlined,color: Themecolor.container,),
                       SizedBox(width: width*0.01,),
                       Text(vehicle, style: Themetext.atextstyle,)
                     ],),

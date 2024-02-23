@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:liveproject/import_all.dart';
-import 'package:liveproject/utilis/theme/themecolors.dart';
 
 class PickupDetailDriver extends StatefulWidget {
   String? elevatedtext;
@@ -35,7 +33,7 @@ class _PickupDetailDriverState extends State<PickupDetailDriver> {
             height: height*0.5,
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
               ),
@@ -113,10 +111,10 @@ class _PickupDetailDriverState extends State<PickupDetailDriver> {
                       SizedBox(
                         height: height * 0.003,
                       ),
-                      Divider(color: Themecolor.Divider,),
+                      const Divider(color: Themecolor.Divider,),
                           Container(
-                           margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(15),
+                           margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.1,
                 decoration: BoxDecoration(
@@ -127,7 +125,7 @@ class _PickupDetailDriverState extends State<PickupDetailDriver> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -138,7 +136,7 @@ class _PickupDetailDriverState extends State<PickupDetailDriver> {
                     Text('From',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold),),
                     SizedBox(height: height*0.01,),
                     Row(children: [
-                      Icon(Icons.location_searching_outlined,color:  Themecolor.container,),
+                      const Icon(Icons.location_searching_outlined,color:  Themecolor.container,),
                       SizedBox(width: width*0.01,),
                       Text(fromLocation, style: Themetext.atextstyle,)
                     ],),
@@ -148,8 +146,8 @@ class _PickupDetailDriverState extends State<PickupDetailDriver> {
                     ),
                     SizedBox(height: height*0.01,),
                         Container(
-                           margin: EdgeInsets.all(10),
-                        padding: EdgeInsets.all(15),
+                           margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.1,
                 decoration: BoxDecoration(
@@ -160,7 +158,7 @@ class _PickupDetailDriverState extends State<PickupDetailDriver> {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -171,7 +169,7 @@ class _PickupDetailDriverState extends State<PickupDetailDriver> {
                     Text('Destination',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold),),
                     SizedBox(height: height*0.01,),
                     Row(children: [
-                      Icon(Icons.location_searching_outlined,color:  Themecolor.container,),
+                      const Icon(Icons.location_searching_outlined,color:  Themecolor.container,),
                       SizedBox(width: width*0.01,),
                       Text(destination, style: Themetext.atextstyle,)
                     ],),

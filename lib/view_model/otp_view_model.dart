@@ -1,8 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liveproject/import_all.dart';
 
-import '../model/verify_otp_model.dart';
-
 final otpViewModelProvider =
     StateNotifierProvider<OtpViewModel, ApiResponse<GeneralResponseModel>>((ref) {
   return OtpViewModel();
@@ -71,7 +69,7 @@ class OtpViewModel extends StateNotifier<ApiResponse<GeneralResponseModel>> {
             };
 
       final response = await _myRepo.resendOtp(optData);
-      print('::: REsponse ${response}');
+      print('::: REsponse $response');
       final userModel = GeneralResponseModel.fromJson(response);
       var msg = response['message'];
       // Utils.toastMessage(msg);

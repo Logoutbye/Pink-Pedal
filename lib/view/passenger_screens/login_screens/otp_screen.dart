@@ -1,8 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:liveproject/import_all.dart';
-import 'package:liveproject/view_model/otp_view_model.dart';
 
 class OtpScreen extends ConsumerStatefulWidget {
   final String phoneNumber;
@@ -47,7 +44,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
               child: Text(
                 'Enter OTP',
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      color: Color(0xFF1E1E1E),
+                      color: const Color(0xFF1E1E1E),
                     ),
               ),
             ),
@@ -58,13 +55,13 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                     text:
                         'We have just sent you 4 digit code via ${widget.phoneNumber} ',
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Color(0xFF9CA4AB),
+                          color: const Color(0xFF9CA4AB),
                         ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Form(
               child: Center(
                 child: Row(
@@ -75,19 +72,19 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                       currentNode: firstBoxNode,
                       nextNode: secondBoxNode,
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     OtpCodeContainer(
                       number: secondBoxController,
                       currentNode: secondBoxNode,
                       nextNode: thirdBoxNode,
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     OtpCodeContainer(
                       number: thirdBoxController,
                       currentNode: thirdBoxNode,
                       nextNode: fourthBoxNode,
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     OtpCodeContainer(
                       number: fourthBoxController,
                       currentNode: fourthBoxNode,
@@ -97,7 +94,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Center(
               child: verifyOtpViewModel.status == Status.LOADING
                   ? const CircularProgressIndicator() // Show loading spinner
@@ -117,14 +114,14 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
                       },
                     ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text.rich(
               TextSpan(
                 children: [
                   TextSpan(
                     text: 'Didn’t receive code? ',
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Color(0xFF9CA4AB),
+                          color: const Color(0xFF9CA4AB),
                         ),
                   ),
                   TextSpan(
@@ -217,8 +214,8 @@ class _OtpCodeContainerState extends State<OtpCodeContainer> {
             inputFormatters: [
               LengthLimitingTextInputFormatter(1),
             ],
-            style: TextStyle(color: Colors.black, fontSize: 15),
-            decoration: InputDecoration(
+            style: const TextStyle(color: Colors.black, fontSize: 15),
+            decoration: const InputDecoration(
               fillColor: Color(0xFF9CA4AB),
               filled: true,
             ),

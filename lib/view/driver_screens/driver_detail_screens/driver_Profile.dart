@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:liveproject/utilis/components/elevatedbutton.dart';
 import 'package:liveproject/utilis/constant/assetpath.dart';
-import 'package:liveproject/utilis/constant/icons.dart';
 import 'package:liveproject/utilis/theme/theme_text.dart';
 import 'package:liveproject/utilis/theme/themecolors.dart';
 
@@ -22,11 +21,11 @@ class _DriverprofileDetailState extends State<DriverprofileDetail> {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
+        leading: const Icon(
           Icons.arrow_back,
           color: Themecolor.container2,
         ),
-        title: Text('Profile'),
+        title: const Text('Profile'),
         centerTitle: true,
       ),
       body: Container(
@@ -37,8 +36,8 @@ class _DriverprofileDetailState extends State<DriverprofileDetail> {
               decoration: BoxDecoration(
                   color: Themecolor.container2,
                   borderRadius: BorderRadius.circular(15)),
-              margin: EdgeInsets.all(15),
-              padding: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               child: ListTile(
                 leading: Container(
                   color: Themecolor.Divider,
@@ -66,8 +65,8 @@ class _DriverprofileDetailState extends State<DriverprofileDetail> {
               height: height * 0.01,
             ),
             Container(
-              margin: EdgeInsets.all(25),
-              padding: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(25),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                   color: Themecolor.container2,
                   borderRadius: BorderRadius.circular(15)),
@@ -75,62 +74,62 @@ class _DriverprofileDetailState extends State<DriverprofileDetail> {
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.phone,color: Themecolor.container,),
+                          const Icon(Icons.phone,color: Themecolor.container,),
                           SizedBox(width: width*0.01,),
                           Text(deriverPhone,style: Themetext.atextstyle,),
              
                         ],
                       ),
                                       SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
             SizedBox(height:height*0.01,),
              Row(
                         children: [
-                          Icon(Icons.mail_outline_outlined,color: Themecolor.container,),
+                          const Icon(Icons.mail_outline_outlined,color: Themecolor.container,),
                           SizedBox(width: width*0.01,),
                           Text(driverEmail,style: Themetext.atextstyle,),
              
                         ],
                       ),
                                       SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
             SizedBox(height:height*0.01,),
              Row(
                         children: [
-                          Icon(Icons.location_on_outlined,color: Themecolor.container,),
+                          const Icon(Icons.location_on_outlined,color: Themecolor.container,),
                           SizedBox(width: width*0.01,),
                           Text(location,style: Themetext.atextstyle,),
              
                         ],
                       ),
                                       SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
             SizedBox(height:height*0.01,),
              Row(
                         children: [
-                          Icon(Icons.history,color: Themecolor.container,),
+                          const Icon(Icons.history,color: Themecolor.container,),
                           SizedBox(width: width*0.01,),
                           Text('History',style: Themetext.atextstyle,),
              
                         ],
                       ),
                                       SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
             SizedBox(height:height*0.01,),
              Row(
                         children: [
-                          Icon(Icons.change_circle_outlined,color: Themecolor.container,),
+                          const Icon(Icons.change_circle_outlined,color: Themecolor.container,),
                           SizedBox(width: width*0.01,),
                           Text('Change Password',style: Themetext.atextstyle,),
              
                         ],
                       ),
                                       SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
             SizedBox(height:height*0.01,),
              Row(
                         children: [
-                          Icon(Icons.contact_phone_outlined,color: Themecolor.container,),
+                          const Icon(Icons.contact_phone_outlined,color: Themecolor.container,),
                           SizedBox(width: width*0.01,),
                           Text('Contact Us',style: Themetext.atextstyle,),
              

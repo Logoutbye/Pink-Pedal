@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:liveproject/import_all.dart';
 
 class CreateNewRide extends StatefulWidget {
@@ -28,13 +27,13 @@ TextEditingController tocontroller=TextEditingController();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Themecolor.container2,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 8.0),
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 8.0),
           child: Icon(Icons.arrow_back_ios),
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 10.0),
+            padding: EdgeInsets.only(right: 10.0),
             child: Icon(
               Icons.my_library_books_outlined,
               size: 30,
@@ -50,7 +49,7 @@ TextEditingController tocontroller=TextEditingController();
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                padding: EdgeInsets.all(15),
+                padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 height: height * 0.13,
                 decoration: BoxDecoration(
@@ -61,7 +60,7 @@ TextEditingController tocontroller=TextEditingController();
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -81,7 +80,7 @@ TextEditingController tocontroller=TextEditingController();
               ),
               SizedBox(height: height * 0.03),
               Container(
-                padding: EdgeInsets.all(15),
+                padding: const EdgeInsets.all(15),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Themecolor.container2,
@@ -91,7 +90,7 @@ TextEditingController tocontroller=TextEditingController();
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(5, 5),
+                      offset: const Offset(5, 5),
                     )
                   ],
                 ),
@@ -190,7 +189,7 @@ TextEditingController tocontroller=TextEditingController();
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 1,
-                            offset: Offset(5, 5),
+                            offset: const Offset(5, 5),
                           )
                         ],
                       ),

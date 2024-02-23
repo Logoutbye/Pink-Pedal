@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liveproject/import_all.dart';
-import 'package:liveproject/model/verify_otp_model.dart';
+
 
 final createNewPasswordViewModelProvider = StateNotifierProvider<
     CreateNewPasswordViewModel, ApiResponse<GeneralResponseModel>>((ref) {

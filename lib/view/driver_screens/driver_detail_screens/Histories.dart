@@ -31,7 +31,7 @@ class _HistoriesState extends State<Histories> {
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(height*0.05),
             child: Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               height: height*0.06,
               decoration: BoxDecoration(
                 color: Themecolor.Divider,
@@ -41,7 +41,7 @@ class _HistoriesState extends State<Histories> {
                ) 
               ),
               child: TabBar(
-                tabs: [
+                tabs: const [
                   Text('Current'),
                   Text('Completed'),
                   Text('Cancelled'),
@@ -51,7 +51,7 @@ class _HistoriesState extends State<Histories> {
                   color: Themecolor.container, // Change this color as needed
                 ),
                  indicatorSize: TabBarIndicatorSize.tab, // Set the size of the indicator
-                indicatorPadding: EdgeInsets.symmetric(horizontal: 16), 
+                indicatorPadding: const EdgeInsets.symmetric(horizontal: 16), 
                 labelColor: Themecolor.container2,
               ),
             ),
@@ -60,7 +60,7 @@ class _HistoriesState extends State<Histories> {
         body: TabBarView(
           children: [
             Container(
-               margin: EdgeInsets.all(10),
+               margin: const EdgeInsets.all(10),
               height: height*0.06,
               decoration: BoxDecoration(
                 color: Themecolor.Divider,
@@ -78,11 +78,11 @@ class _HistoriesState extends State<Histories> {
                   'Mustang Shelby GT',
                   style: Themetext.btextstyle,
                 ),
-                trailing: Text('Today at 09:20 am'),
+                trailing: const Text('Today at 09:20 am'),
               ),
             ),
             Container(
-               margin: EdgeInsets.all(10),
+               margin: const EdgeInsets.all(10),
               height: height*0.06,
               decoration: BoxDecoration(
                 color: Themecolor.Divider,
@@ -109,7 +109,7 @@ class _HistoriesState extends State<Histories> {
               ),
             ),
             Container(
-               margin: EdgeInsets.all(10),
+               margin: const EdgeInsets.all(10),
               height: height*0.06,
               decoration: BoxDecoration(
                 color: Themecolor.Divider,
@@ -130,7 +130,7 @@ class _HistoriesState extends State<Histories> {
                       'Mustang Shelby GT',
                       style: Themetext.btextstyle,
                     ),
-                    trailing: Text('Cancel'),
+                    trailing: const Text('Cancel'),
                   );
                 },
               ),

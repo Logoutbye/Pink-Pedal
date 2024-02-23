@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:liveproject/import_all.dart';
 class RideCompleted extends StatefulWidget {
   const RideCompleted({super.key});

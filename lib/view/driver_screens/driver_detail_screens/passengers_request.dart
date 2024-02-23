@@ -182,7 +182,7 @@ class _PassengersRequestsState extends State<PassengersRequests> {
                                 width: width * 0.01,
                               ),
                               CustomElevatedButton(
-                                  color: Color(0xFFF65E5D),
+                                  color: const Color(0xFFF65E5D),
                                   size: Size(width * 0.4, height * 0.01),
                                   text: 'Deny',
                                   onPressed: () {})
@@ -191,7 +191,7 @@ class _PassengersRequestsState extends State<PassengersRequests> {
                         )
                       ],
                     ),
-                    Divider(), // Divider added here
+                    const Divider(), // Divider added here
                   ],
                 );
               },

@@ -34,7 +34,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
             SizedBox(height:height*0.01,),
             Text(earnings,style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold,fontSize: 24),),
          SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
               SizedBox(height:height*0.01,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,7 +45,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
         ),)
               ],),
                SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
             SizedBox(height:height*0.01,),
                  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,7 +56,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
         ),)
               ],),
               SizedBox(height:height*0.01,),
-              Divider(color: Themecolor.Divider,),
+              const Divider(color: Themecolor.Divider,),
             SizedBox(height:height*0.01,),
                  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,7 +75,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
                   SizedBox(height:height*0.03,),
                   
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Themecolor.Divider,

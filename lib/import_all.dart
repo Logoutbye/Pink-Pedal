@@ -35,7 +35,7 @@ export 'package:liveproject/view/passenger_screens/profile_screens/add_new_adres
 export 'package:liveproject/view/passenger_screens/profile_screens/help_and_support.dart';
 export 'package:liveproject/view/passenger_screens/profile_screens/my_profile.dart';
 export 'package:liveproject/view/passenger_screens/profile_screens/profile_detail.dart';
-export 'package:liveproject/view/passenger_screens/splash/onboarding_screens/firstscreen.dart';
+export 'package:liveproject/view/common_screens/on_boarding_screens.dart';
 export 'package:liveproject/view/common_screens/signinscreens.dart';
 export 'package:liveproject/utilis/components/elevatedbutton.dart';
 export 'package:liveproject/utilis/constant/assetpath.dart';
@@ -65,3 +65,6 @@ export 'package:liveproject/view_model/login_view_model.dart';
 export 'package:liveproject/model/user_registration_model.dart';
 export 'package:liveproject/data/response/api_response.dart';
 export 'package:liveproject/view_model/sigin_up_view_model.dart';
+export 'package:liveproject/model/verify_otp_model.dart';
+export 'package:liveproject/view_model/create_new_password_view_model.dart';
+export 'package:liveproject/view_model/otp_view_model.dart';

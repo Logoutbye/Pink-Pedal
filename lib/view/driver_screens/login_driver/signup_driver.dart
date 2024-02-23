@@ -14,7 +14,6 @@ class _SignupDriverState extends State<SignupDriver> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Themecolor.container,
       appBar: AppBar(
@@ -22,7 +21,10 @@ class _SignupDriverState extends State<SignupDriver> {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon:  Icon(Icons.arrow_back_ios,color: Themecolor.container2,),
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Themecolor.container2,
+          ),
         ),
         title: Text('Sign up', style: Theme.of(context).textTheme.bodyMedium
             // Set text color for AppBar title
@@ -191,61 +193,83 @@ class _SignupDriverState extends State<SignupDriver> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: Themecolor.container, // Change the color to your desired color
-                              width: 2, // Adjust the width of the border as needed
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: Themecolor
+                                      .container, // Change the color to your desired color
+                                  width:
+                                      2, // Adjust the width of the border as needed
+                                ),
+                              ),
+                              child: CircleAvatar(
+                                maxRadius: 30,
+                                child: Image.asset(AssetPaths.bike),
+                              ),
                             ),
-                          ),
-                          child: CircleAvatar(
-                            maxRadius: 30,
-                            child: Image.asset(AssetPaths.bike),
-                          ),
-                        ),
-                         SizedBox(height: height*0.01,),
-                         Text('Bike',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
-                          SizedBox(height: height*0.01,),
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            Text('Bike',
+                                style: Themetext.atextstyle
+                                    .copyWith(fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
                             Icon(Icons.circle_outlined),
-          
-          
-                        
-                          
                           ],
                         ),
                         Column(
                           children: [
                             Image.asset(AssetPaths.car),
-                             SizedBox(height: height*0.01,),
-                             Text('car',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
-                              SizedBox(height: height*0.01,),
-                               Icon(Icons.circle,color: Themecolor.container,),
-          
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            Text('car',
+                                style: Themetext.atextstyle
+                                    .copyWith(fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            Icon(
+                              Icons.circle,
+                              color: Themecolor.container,
+                            ),
                           ],
                         ),
                         Column(
                           children: [
                             Image.asset(AssetPaths.carry),
-                              SizedBox(height: height*0.01,),
-                               Text('Carry',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
-                                SizedBox(height: height*0.01,),
-                                 Icon(Icons.circle_outlined),
-          
-          
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            Text('Carry',
+                                style: Themetext.atextstyle
+                                    .copyWith(fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            Icon(Icons.circle_outlined),
                           ],
                         ),
                         Column(
-                          children: [Image.asset(AssetPaths.PremierCar),
-                             SizedBox(height: height*0.01,),
-                              Text('Premier car',style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
-                                   SizedBox(height: height*0.01,),
-                                     Icon(Icons.circle_outlined),
-          
+                          children: [
+                            Image.asset(AssetPaths.PremierCar),
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            Text('Premier car',
+                                style: Themetext.atextstyle
+                                    .copyWith(fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: height * 0.01,
+                            ),
+                            Icon(Icons.circle_outlined),
                           ],
                         )
                       ],
                     ),
-                             SizedBox(
+                    SizedBox(
                       height: height * 0.01,
                     ),
                     Text('Enter Car Name',
@@ -272,8 +296,10 @@ class _SignupDriverState extends State<SignupDriver> {
                         ),
                       ),
                     ),
-                    SizedBox(height: height*0.01,),
-                             SizedBox(
+                    SizedBox(
+                      height: height * 0.01,
+                    ),
+                    SizedBox(
                       height: height * 0.01,
                     ),
                     Text('Enter Car Number ',
@@ -290,7 +316,7 @@ class _SignupDriverState extends State<SignupDriver> {
                       child: TextField(
                         controller: passtext,
                         keyboardType: TextInputType.text,
-                        style:const  TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Enter Your car numbers',
@@ -300,8 +326,6 @@ class _SignupDriverState extends State<SignupDriver> {
                         ),
                       ),
                     ),
-                  
-                    
                   ],
                 ),
               ),
@@ -313,7 +337,7 @@ class _SignupDriverState extends State<SignupDriver> {
                   onPressed: () {
                     navigatorsignup();
                   }),
-                   SizedBox(
+              SizedBox(
                 height: height * 0.02,
               ),
             ],
@@ -324,6 +348,6 @@ class _SignupDriverState extends State<SignupDriver> {
   }
 
   void navigatorsignup() {
-    Navigator.pushNamed(context, RoutesName.otpCode);
+    // Navigator.pushNamed(context, RoutesName.otpCode);
   }
 }

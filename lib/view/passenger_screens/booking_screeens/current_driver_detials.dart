@@ -30,10 +30,10 @@ class _CurrentDeriverDetailsState extends State<CurrentDeriverDetails> {
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios,color: Themecolor.container2,),
-        actions: [
+        leading: const Icon(Icons.arrow_back_ios,color: Themecolor.container2,),
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Icon(Icons.view_day_rounded,color: Themecolor.container2,size: 30,),
           ),
         ],

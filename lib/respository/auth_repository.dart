@@ -9,7 +9,7 @@ class AuthRepository {
           await apiServices.fetchPostApiResponse(AppUrl.login, data);
       return response;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -19,7 +19,7 @@ class AuthRepository {
           await apiServices.fetchPostApiResponse(AppUrl.signup, data);
       return response;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -29,7 +29,7 @@ class AuthRepository {
           await apiServices.fetchPostApiResponse(AppUrl.verifyOtp, data);
       return response;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -39,7 +39,7 @@ class AuthRepository {
           await apiServices.fetchPostApiResponse(AppUrl.resendOtp, data);
       return response;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -49,7 +49,7 @@ class AuthRepository {
           AppUrl.createNewPassword, data);
       return response;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

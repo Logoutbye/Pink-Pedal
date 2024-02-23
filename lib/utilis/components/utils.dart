@@ -20,16 +20,16 @@ class Utils {
       context: context,
       flushbar: Flushbar(
         forwardAnimationCurve: Curves.decelerate,
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        padding: EdgeInsets.all(15),
+        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.all(15),
         message: message,
-        duration: Duration(seconds: 3),
+        duration: const Duration(seconds: 3),
         borderRadius: BorderRadius.circular(8),
         flushbarPosition: FlushbarPosition.TOP,
         backgroundColor: Colors.red,
         reverseAnimationCurve: Curves.easeInOut,
         positionOffset: 20,
-        icon: Icon(
+        icon: const Icon(
           Icons.error,
           size: 28,
           color: Colors.white,
@@ -43,7 +43,7 @@ class Utils {
         backgroundColor: Themecolor.flushbar,
         content: Text(
           message,
-          style: TextStyle(color: Themecolor.container2),
+          style: const TextStyle(color: Themecolor.container2),
         )));
   }
 }

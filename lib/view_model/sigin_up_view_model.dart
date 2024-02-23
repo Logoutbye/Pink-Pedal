@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:http/http.dart' as http;
 import 'package:liveproject/import_all.dart';
 
 final signUpViewModelProvider =
@@ -29,7 +28,7 @@ class SignUpViewModel extends StateNotifier<ApiResponse<UserRegistration>> {
       // Convert the response to UserModel
       final modelResponse = UserRegistration.fromJson(response);
       var msg = response['message'];
-      print(':::response for sigin up${response}');
+      print(':::response for sigin up$response');
       Utils.toastMessage(msg);
       state = ApiResponse.completed(modelResponse);
 

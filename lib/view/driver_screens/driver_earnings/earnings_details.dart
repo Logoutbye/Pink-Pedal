@@ -35,9 +35,9 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(15),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(15),
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                   color: Themecolor.container2),
               child: Column(
@@ -69,7 +69,7 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
                     SizedBox(
                       height: height * 0.01,
                     ),
-                    Divider(
+                    const Divider(
                       color: Themecolor.Divider,
                     ),
                     SizedBox(
@@ -77,7 +77,7 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
                     ),
                     Row(
                       children: [
-                        Icon(Icons.repeat),
+                        const Icon(Icons.repeat),
                         SizedBox(
                           width: width * 0.01,
                         ),
@@ -88,7 +88,7 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
                         SizedBox(
                           width: width * 0.58,
                         ),
-                        Icon(Icons.av_timer_sharp),
+                        const Icon(Icons.av_timer_sharp),
                         SizedBox(
                           width: width * 0.01,
                         ),
@@ -103,9 +103,9 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
             // SizedBox(height: height*0.02,),
             Container(
               width: width * double.infinity,
-              margin: EdgeInsets.all(15),
-              padding: EdgeInsets.all(15),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                   color: Themecolor.container2),
               child: Column(
@@ -127,7 +127,7 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
                     aspectRatio: 2,
                     child: BarChart(BarChartData(
                         borderData: FlBorderData(
-                            border: Border(
+                            border: const Border(
                                 top: BorderSide.none,
                                 right: BorderSide.none,
                                 left: BorderSide(width: 1),
@@ -159,7 +159,7 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
                                 fromY: 0, toY: 9, color: Themecolor.container)
                           ]),
                         ],
-                        titlesData: FlTitlesData(
+                        titlesData: const FlTitlesData(
                             show: true,
                             bottomTitles: AxisTitles(
                                 sideTitles: SideTitles(
@@ -170,8 +170,8 @@ class _DriverEarningsDetailsState extends State<DriverEarningsDetails> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(15),
-              padding: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               width: double.infinity,
               decoration: BoxDecoration(
                   color: Themecolor.container2,

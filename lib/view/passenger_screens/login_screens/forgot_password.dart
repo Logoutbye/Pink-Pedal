@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liveproject/import_all.dart';
-import 'package:liveproject/view_model/otp_view_model.dart';
 
 class ForgotPassword extends ConsumerStatefulWidget {
   final String withEmailOrPhoneNo;
@@ -85,7 +84,7 @@ class _ForgotPasswordState extends ConsumerState<ForgotPassword> {
             ),
             Center(
                 child: verifyOtpViewModel.status == Status.LOADING
-                    ? CircularProgressIndicator()
+                    ? const CircularProgressIndicator()
                     : CustomElevatedButton(
                         text: 'Send OTP',
                         onPressed: () => ref

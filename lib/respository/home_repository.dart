@@ -9,7 +9,7 @@ class HomeRepository {
           await apiServices.fetchGetApiResponse(AppUrl.baseUrl);
       return response = MovieListModel.fromJson(response);
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

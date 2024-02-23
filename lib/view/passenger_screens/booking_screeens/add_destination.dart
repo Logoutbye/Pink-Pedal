@@ -33,7 +33,7 @@ class _AddDestinationState extends State<AddDestination> {
     return Scaffold(
       backgroundColor: Themecolor.container,
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios, color: Themecolor.container2),
+        leading: const Icon(Icons.arrow_back_ios, color: Themecolor.container2),
         actions: [
           Builder(
             builder: (context) => Padding(
@@ -42,7 +42,7 @@ class _AddDestinationState extends State<AddDestination> {
                 onTap: () {
                   Scaffold.of(context).openEndDrawer();
                 },
-                child: Icon(Icons.view_headline_outlined,
+                child: const Icon(Icons.view_headline_outlined,
                     color: Themecolor.container2, size: 35),
               ),
             ),
@@ -53,7 +53,7 @@ class _AddDestinationState extends State<AddDestination> {
         width: width * 0.55,
         child: ListView(
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               height: height * 0.3,
               child: Image.asset(
@@ -63,7 +63,7 @@ class _AddDestinationState extends State<AddDestination> {
             ),
             Container(
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Themecolor.container,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(15),
@@ -93,28 +93,28 @@ class _AddDestinationState extends State<AddDestination> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home_outlined, size: 35, color: Themecolor.container),
+              leading: const Icon(Icons.home_outlined, size: 35, color: Themecolor.container),
               title: Text('Home', style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
             ),
             ListTile(
-              leading: Icon(Icons.person_2_outlined, size: 35, color: Themecolor.container),
+              leading: const Icon(Icons.person_2_outlined, size: 35, color: Themecolor.container),
               title: Text('Profile', style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
             ),
             ListTile(
-              leading: Icon(Icons.wallet, size: 35, color: Themecolor.container),
+              leading: const Icon(Icons.wallet, size: 35, color: Themecolor.container),
               title: Text('Wallet', style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
             ),
             ListTile(
-              leading: Icon(Icons.history, size: 35, color: Themecolor.container),
+              leading: const Icon(Icons.history, size: 35, color: Themecolor.container),
               title: Text('History', style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold)),
             ),
             Expanded(
               child: SizedBox(height: height * 0.23),
             ),
-            Divider(),
+            const Divider(),
             ListTile(
-              leading: Icon(Icons.logout, size: 35, color: Color(0xFFFF0000)),
-              title: Text('Logout', style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold, color: Color(0xFFFF0000))),
+              leading: const Icon(Icons.logout, size: 35, color: Color(0xFFFF0000)),
+              title: Text('Logout', style: Themetext.atextstyle.copyWith(fontWeight: FontWeight.bold, color: const Color(0xFFFF0000))),
               onTap: () {
                 // Add logout functionality here
               },
@@ -127,13 +127,13 @@ class _AddDestinationState extends State<AddDestination> {
           children: [
             Container(
               height: height * 0.3,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Themecolor.container,
               ),
               child: Center(child: Image.asset(AssetPaths.splashimage)),
             ),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Themecolor.Divider,
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),

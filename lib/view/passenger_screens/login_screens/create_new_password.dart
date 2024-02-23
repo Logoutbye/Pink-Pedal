@@ -2,7 +2,7 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:liveproject/import_all.dart';
-import 'package:liveproject/view_model/create_new_password_view_model.dart';
+
 
 class CreateNewPassword extends ConsumerStatefulWidget {
   final String token;
@@ -96,7 +96,7 @@ class _CreateNewPasswordState extends ConsumerState<CreateNewPassword> {
               ),
               Center(
                 child: createViewModel.status == Status.LOADING
-                    ? CircularProgressIndicator()
+                    ? const CircularProgressIndicator()
                     : CustomElevatedButton(
                         text: 'Next',
                         onPressed: () {
